@@ -1,37 +1,43 @@
 Zabbix Hadoop Monitor
 =====================
 
+------
+
++ 現在工事中です。
+
+------
+
 + What is it?
 
-���̃c�[���́AZabbix�ɂ�Hadoop��HBase�̃��g���N�X�����W���邽�߂̃c�[���ł��BZabbix�̊O���X�N���v�g�Ƃ��ē��삵�܂��B�ȉ��̊��œ���m�F�����Ă��܂��B
+このツールは、ZabbixにてHadoopとHBaseのメトリクスを収集するためのツールです。Zabbixの外部スクリプトとして動作します。以下の環境で動作確認をしています。
 
 * CDH3
 * CDH4 + MRv1
 
 
-+ ����ɕK�v�ȑO�����
++ 動作に必要な前提条件
 
-* �Ď��ΏۂƂȂ�Hadoop�AHBase������ɓ��삵�Ă��邱�ƁB
-* Zabbix�T�[�o���Z�b�g�A�b�v����A�O���X�N���v�g�ɂ������W���\�ɂȂ��Ă��邱�ƁB
-* Zabbix�T�[�o��Perl��JSON���W���[�����C���X�g�[������Ă��邱�ƁB
-** �X�N���v�g������Perl��JSON���W���[�����g�p���܂��B��������Ă��Ȃ��ꍇ�́A�K�X�C���X�g�[�����s���Ă��������B
-    ��FCentOS�̃��|�W�g������C���X�g�[�����s���ꍇ
+* 監視対象となるHadoop、HBaseが正常に動作していること。
+* Zabbixサーバがセットアップされ、外部スクリプトによる情報収集が可能になっていること。
+* ZabbixサーバにPerlのJSONモジュールがインストールされていること。
+** スクリプト内部でPerlのJSONモジュールを使用します。導入されていない場合は、適宜インストールを行ってください。
+    例：CentOSのリポジトリからインストールを行う場合
     $ sudo yum install perl-JSON
 
 
 ******
 
-�{�c�[���̓���
+本ツールの導入
 
 ******
 
 * Hadoop and HBase setup
 
-Hadoop�T�[�r�X����{�c�[�������g���N�X���擾�ł���悤���邽�߁A�ȉ��̐ݒ���s���܂��B
+Hadoopサービスから本ツールがメトリクスを取得できるようするため、以下の設定を行います。
 
-** CDH3�����ݒ�
-CDH3�ɑ΂�������W���s���ꍇ�́AMetrics Servlet��L���ɂ��āA����������擾���ł���悤�ɂ���K�v������܂��B
-���ł�Ganglia�ł̃��g���N�X���W���s���Ă���ꍇ�́AMetrics Servlet�������ɗL���ɂȂ��Ă���̂ŁA�ǉ��̐ݒ�͕K�v����܂���BMetrics Servlet�̂ݗL���ɂ���ꍇ�́A�ȉ��̒ʂ�̐ݒ���s���A�N���X�^�S�̂ɔz�z���A�Y����Hadoop�T�[�r�X�̍ċN�����s���Ă��������B
+** CDH3向け設定
+CDH3に対する情報収集を行う場合は、Metrics Servletを有効にして、そこから情報取得ができるようにする必要があります。
+すでにGangliaでのメトリクス収集を行っている場合は、Metrics Servletも同時に有効になっているので、追加の設定は必要ありません。Metrics Servletのみ有効にする場合は、以下の通りの設定を行い、クラスタ全体に配布し、該当のHadoopサービスの再起動を行ってください。
 
 /etc/hadoop/conf/hadoop-metrics.properties
 
@@ -57,107 +63,107 @@ CDH3�ɑ΂�������W���s���ꍇ�́AMetrics Servlet��L���ɂ��āA����������擾�
     ugi.period=30
 
 
-** TaskTracker�|�[�g�̌Œ�
-TaskTracker����擾���郁�g���N�X�����Œ肷�邽�߁Amapred-site.xml�Ɉȉ��̐ݒ�������A�N���X�^�S�̂ɔz�z���܂��B�ݒ���I������ATaskTracker���ċN�����Ă��������B
+** TaskTrackerポートの固定
+TaskTrackerから取得するメトリクス名を固定するため、mapred-site.xmlに以下の設定を加え、クラスタ全体に配布します。設定を終えたら、TaskTrackerを再起動してください。
     <property>
       <name>mapred.task.tracker.report.port</name>
       <value>50050</value>
     </property>
 
-�����̐ݒ���s����|�͈ȉ��̃u���O�ɏ����Ă���̂ŁA��������������������B
+※この設定を行う趣旨は以下のブログに書いているので、そちらをご覧ください。
 
 
-** CDH4�����ݒ�
+** CDH4向け設定
 ++ HDFS(Namenode, SecondaryNamenode, Datanode, Journalnode)
-�����̃R���|�[�l���g�̓f�t�H���g��JMX Servlet�ɂ�郁�g���N�X�擾���ł���悤�ɂȂ��Ă��܂��B���̂��߁A���ɒǉ��̐ݒ�͕K�v����܂���B
+これらのコンポーネントはデフォルトでJMX Servletによるメトリクス取得ができるようになっています。そのため、特に追加の設定は必要ありません。
 
-++ ����ȊO�iJobTracker�ATaskTracker�AHBase Master�AHBase Regionserver�j
-�����̃R���|�[�l���g�́AJMX Servlet�ɂ�郁�g���N�X�擾���ł��Ȃ����߁AMetrics Servlet��L���ɂ��āA����������擾���ł���悤�ɂ���K�v������܂��B�ݒ���@��CDH3�ł�Metrics Servlet�̐ݒ�Ɠ��l�ł��B
+++ それ以外（JobTracker、TaskTracker、HBase Master、HBase Regionserver）
+これらのコンポーネントは、JMX Servletによるメトリクス取得ができないため、Metrics Servletを有効にして、そこから情報取得ができるようにする必要があります。設定方法はCDH3でのMetrics Servletの設定と同様です。
 
-** TaskTracker�|�[�g�̌Œ�
-CDH3�����ݒ�Ɠ��l�̐ݒ���s���܂��B�ݒ���I������TaskTracker���ċN�����Ă��������B
+** TaskTrackerポートの固定
+CDH3向け設定と同様の設定を行います。設定を終えたらTaskTrackerを再起動してください。
 
 
-* �����W�X�N���v�g�̔z�u 
+* 情報収集スクリプトの配置 
 
-Zabbix�T�[�o�̊O���X�N���v�g�f�B���N�g���� "/etc/zabbix/externalscripts" �ƂȂ��Ă�����ł���΁A�ȉ��̃R�}���h�ɂăX�N���v�g�̔z�u���s�����Ƃ��ł��܂��B
+Zabbixサーバの外部スクリプトディレクトリが "/etc/zabbix/externalscripts" となっている環境であれば、以下のコマンドにてスクリプトの配置を行うことができます。
 
  $ git clone zbx_hadoop_monitor
  $ cd zbx_hadoop_monitor
  $ ./install.sh
 
-��L�ȊO��Zabbix�T�[�o�̊O���X�N���v�g�f�B���N�g���Ƃ��Ă���ꍇ�́A�蓮�ňȉ��̂悤�Ƀt�@�C����z�u���Ă��������B
+上記以外をZabbixサーバの外部スクリプトディレクトリとしている場合は、手動で以下のようにファイルを配置してください。
 
 
-* Zabbix�e���v���[�g�̃C���|�[�g
+* Zabbixテンプレートのインポート
 
-�{�T�C�g��template�f�B���N�g���ɔz�u����Ă���XML�t�@�C����Zabbix���C���|�[�g���Ă��������B
-�i�z�z���Ă���e���v���[�g�́A�W���I�ȍ\���݂̂ɑΉ��������̂ɂȂ�܂��B���̒��Ɋ܂܂�Ȃ����g���N�X���Ď�����ꍇ�́A�Y�t�c�[���ɂăe���v���[�g�𐶐�����K�v������܂��j
+本サイトのtemplateディレクトリに配置されているXMLファイルをZabbixよりインポートしてください。
+（配布しているテンプレートは、標準的な構成のみに対応したものになります。その中に含まれないメトリクスを監視する場合は、添付ツールにてテンプレートを生成する必要があります）
 
 
-+ �Ď��Ώۂւ̃e���v���[�g�K�p
++ 監視対象へのテンプレート適用
 
-�O���ŃC���|�[�g�����e���v���[�g��Ή�����T�[�r�X�����삵�Ă���T�[�o�ɓK�p���Ă��������B�����W���J�n����܂��B
+前項でインポートしたテンプレートを対応するサービスが動作しているサーバに適用してください。情報収集が開始されます。
 
 
 ******
 
-���̃c�[���̓���d�l�ɂ���
+このツールの動作仕様について
 
 ******
 
-+ ����T�v
-���̃c�[���́AZabbix�̊O���X�N���v�g�A�C�e���ɂď����W�X�N���v�g���N�����A�eHadoop�T�[�r�X����JSON�`���ŏ����擾���A����𐮌`����zabbix_sender���g���āA���g���N�X���Ƃ̊Ď��A�C�e���ɓo�^���܂��B
-�O���X�N���v�g���N������Ď��A�C�e���ɂ́A�X�N���v�g�̎��s���ʂ��o�^����܂��B�ʏ펞�͂�����zabbix_sender�̖߂�l���o�^����܂��B�e���v���[�g�ɓo�^����Ă��Ȃ��A�C�e��������ꍇ�́A���̃��O����m�F���邱�Ƃ��ł��܂��B�܂��A�X�N���v�g�����삵���̂��ɁA���擾�Ɏ��s���Ă���ꍇ�̓G���[���b�Z�[�W���o�^����܂��B
++ 動作概要
+このツールは、Zabbixの外部スクリプトアイテムにて情報収集スクリプトを起動し、各HadoopサービスからJSON形式で情報を取得し、それを整形してzabbix_senderを使って、メトリクスごとの監視アイテムに登録します。
+外部スクリプトを起動する監視アイテムには、スクリプトの実行結果が登録されます。通常時はここにzabbix_senderの戻り値が登録されます。テンプレートに登録されていないアイテムがある場合は、そのログから確認することができます。また、スクリプトが動作したのちに、情報取得に失敗している場合はエラーメッセージが登録されます。
 
 
-* �X�N���v�g�I�v�V����
-���̃c�[���ɂ͈ȉ��̃I�v�V����������܂��B�i���ɖ��L����Ă��Ȃ����̂́A�X�N���v�g���ʂ̃I�v�V�����ł��j
+* スクリプトオプション
+このツールには以下のオプションがあります。（特に明記されていないものは、スクリプト共通のオプションです）
 
 ** --detailed
 detailed metrics
-���\�b�h���Ƃ̎��s���ԂȂǂ̏ڍׂȃf�[�^���擾���邱�Ƃ��ł��܂����A�擾�f�[�^�ʂ������Ȃ��Ă��܂����߁A�f�t�H���g�ł͎擾���Ȃ��悤�ɂȂ��Ă��܂��B
-���̃��g���N�X���g���ꍇ�́A�X�N���v�g���s����"--detailed"�Ƃ����I�v�V���������Ă��������B
+メソッドごとの実行時間などの詳細なデータを取得することができますが、取得データ量が多くなってしまうため、デフォルトでは取得しないようになっています。
+このメトリクスを使う場合は、スクリプト実行時に"--detailed"というオプションをつけてください。
 
 ** --nosend
 
 ** --javalang (get_hadoop_jmx.pl only)
 
-JMX Servlet �o�R�Ŏ擾�ł�����ɂ́AHadoop�T�[�r�X�ŗL�̂��̂̂ق��ɁA��ʓI��JMX�̒l���܂߂܂�Ă��܂��B���̂����A"java.lang"�ɕ��ނ���Ă���q�[�v�g�p�ʓ���ǉ��擾���邽�߂̃I�v�V�����ł��BHadoop�T�[�r�X�ŗL�̃��g���N�X�Əd�Ȃ��Ă��镔�����������߁A�f�t�H���g�ł̓I�t�ɂȂ��Ă��܂��B
+JMX Servlet 経由で取得できる情報には、Hadoopサービス固有のもののほかに、一般的なJMXの値も含めまれています。そのうち、"java.lang"に分類されているヒープ使用量等を追加取得するためのオプションです。Hadoopサービス固有のメトリクスと重なっている部分が多いため、デフォルトではオフになっています。
 
 ** --dump_json
 
-�X�N���v�g�f�o�b�O�p�̃I�v�V�����ł��B�W���G���[�o�͂�JSON�f�[�^��Dump���o�͂��܂��B
+スクリプトデバッグ用のオプションです。標準エラー出力にJSONデータのDumpを出力します。
 
 
-* Zabbix Proxy�\���ւ̑Ή�
-���̃c�[����Zabbix Proxy�\���ł����삵�܂��B���̏ꍇ�́A�����ŏЉ�Ă���C���X�g�[���菇�ɏ����āAZabbix Proxy�̊O���X�N���v�g�f�B���N�g���ɃX�N���v�g��z�u���Ă��������B
+* Zabbix Proxy構成への対応
+このツールはZabbix Proxy構成でも動作します。その場合は、ここで紹介しているインストール手順に準じて、Zabbix Proxyの外部スクリプトディレクトリにスクリプトを配置してください。
 
 
 ******
 
-�t���c�[�����g����Zabbix�e���v���[�g�̐���
+付属ツールを使ったZabbixテンプレートの生成
 
 ******
 
-* �e���v���[�g�����c�[���̊�{�I�Ȏg����
+* テンプレート生成ツールの基本的な使い方
 
-�{�c�[���ɂ́A�����W�X�N���v�g��Hadoop�T�[�r�X����擾�����f�[�^�����Ƃ�Zabbix�e���v���[�g�𐶐�����X�N���v�g���t�����Ă��܂��B�����W�X�N���v�g�ɂ͂��̃c�[���ƘA�g���邽�߁AZabbix�Ƀf�[�^�𑗐M�����A�W���o�͂Ɏ擾���ʂ��o�͂���I�v�V����������A�ȉ��̂悤�Ɏg�p���܂��B
+本ツールには、情報収集スクリプトがHadoopサービスから取得したデータをもとにZabbixテンプレートを生成するスクリプトが付属しています。情報収集スクリプトにはこのツールと連携するため、Zabbixにデータを送信せず、標準出力に取得結果を出力するオプションがあり、以下のように使用します。
 
  $ ./get_hadoop_metrics.pl dummy hostname port --nosend | ./convert_infile.pl > template_name.xml
 
-���Ƃ��΁AQJM���g����Namenode HA�\���ł́AJournalnode�ւ̏������ݒx���Ɋւ��郁�g���N�X���擾�\�ł��B�������A���̃��g���N�X����Journalnode��IP�A�h���X�ƃ|�[�g�ԍ��Ɉˑ����邽�߁A���̊��Ńe���v���[�g�̐������s���K�v������܂��B
+たとえば、QJMを使ったNamenode HA構成では、Journalnodeへの書き込み遅延に関するメトリクスが取得可能です。ただし、そのメトリクス名がJournalnodeのIPアドレスとポート番号に依存するため、その環境でテンプレートの生成を行う必要があります。
 
 
-* �O���t�A�g���K�[�ݒ���܂߂���������
+* グラフ、トリガー設定も含めた自動生成
 
-�擾�Ώۂɍ��킹���R���t�B�O�t�@�C�����쐬���邱�ƂŁA�O���t��g���K�[���܂񂾃e���v���[�g�𐶐����邱�Ƃ��ł��܂��B�g�����͐\����Ȃ��ł����A�\�[�X�R�[�h���Q�Ƃ��Ă��������B
+取得対象に合わせたコンフィグファイルを作成することで、グラフやトリガーを含んだテンプレートを生成することができます。使い方は申し訳ないですが、ソースコードを参照してください。
 
 
 ******
 
-���̂ق�
+そのほか
 
 ******
 
-���̃c�[����Perl���g���Ă��܂����APython�ŏ������������Ǝv���Ă��܂��B���g���N�X�ɂ��ẮAASF�ł��h�L�������g����������Ă��Ȃ��̂ŁA�擾���e�͓K�X�m�F���Ă��������B
+このツールはPerlを使っていますが、Pythonで書き直そうかと思っています。メトリクスについては、ASFでもドキュメントが整備されていないので、取得内容は適宜確認してください。
