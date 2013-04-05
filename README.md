@@ -3,11 +3,11 @@ Zabbix Hadoop Monitor
 
 ------
 
-+ 現在工事中です。
+# 現在工事中です。
 
 ------
 
-+ What is it?
+# What is it?
 
 このツールは、ZabbixにてHadoopとHBaseのメトリクスを収集するためのツールです。Zabbixの外部スクリプトとして動作します。以下の環境で動作確認をしています。
 
@@ -15,12 +15,12 @@ Zabbix Hadoop Monitor
 * CDH4 + MRv1
 
 
-+ 動作に必要な前提条件
+# 動作に必要な前提条件
 
 * 監視対象となるHadoop、HBaseが正常に動作していること。
 * Zabbixサーバがセットアップされ、外部スクリプトによる情報収集が可能になっていること。
 * ZabbixサーバにPerlのJSONモジュールがインストールされていること。
-** スクリプト内部でPerlのJSONモジュールを使用します。導入されていない場合は、適宜インストールを行ってください。
+* スクリプト内部でPerlのJSONモジュールを使用します。導入されていない場合は、適宜インストールを行ってください。
     例：CentOSのリポジトリからインストールを行う場合
     $ sudo yum install perl-JSON
 
@@ -31,11 +31,11 @@ Zabbix Hadoop Monitor
 
 ******
 
-* Hadoop and HBase setup
+## Hadoop and HBase setup
 
 Hadoopサービスから本ツールがメトリクスを取得できるようするため、以下の設定を行います。
 
-** CDH3向け設定
+### CDH3向け設定
 CDH3に対する情報収集を行う場合は、Metrics Servletを有効にして、そこから情報取得ができるようにする必要があります。
 すでにGangliaでのメトリクス収集を行っている場合は、Metrics Servletも同時に有効になっているので、追加の設定は必要ありません。Metrics Servletのみ有効にする場合は、以下の通りの設定を行い、クラスタ全体に配布し、該当のHadoopサービスの再起動を行ってください。
 
@@ -52,7 +52,8 @@ CDH3に対する情報収集を行う場合は、Metrics Servletを有効にし�
     ugi.class=org.apache.hadoop.metrics.spi.NoEmitMetricsContext
     ugi.period=30
 
-/etc/hbase/conf/hadoop-metrics.properties
+* /etc/hbase/conf/hadoop-metrics.properties
+
     hbase.class=org.apache.hadoop.metrics.spi.NoEmitMetricsContext
     hbase.period=30
     jvm.class=org.apache.hadoop.metrics.spi.NoEmitMetricsContext
@@ -63,24 +64,24 @@ CDH3に対する情報収集を行う場合は、Metrics Servletを有効にし�
     ugi.period=30
 
 
-** TaskTrackerポートの固定
+### TaskTrackerポートの固定
 TaskTrackerから取得するメトリクス名を固定するため、mapred-site.xmlに以下の設定を加え、クラスタ全体に配布します。設定を終えたら、TaskTrackerを再起動してください。
     <property>
       <name>mapred.task.tracker.report.port</name>
       <value>50050</value>
     </property>
 
-※この設定を行う趣旨は以下のブログに書いているので、そちらをご覧ください。
+* この設定を行う趣旨は以下のブログに書いているので、そちらをご覧ください。
 
 
-** CDH4向け設定
-++ HDFS(Namenode, SecondaryNamenode, Datanode, Journalnode)
+## CDH4向け設定
+### HDFS(Namenode, SecondaryNamenode, Datanode, Journalnode)
 これらのコンポーネントはデフォルトでJMX Servletによるメトリクス取得ができるようになっています。そのため、特に追加の設定は必要ありません。
 
-++ それ以外（JobTracker、TaskTracker、HBase Master、HBase Regionserver）
+### それ以外（JobTracker、TaskTracker、HBase Master、HBase Regionserver）
 これらのコンポーネントは、JMX Servletによるメトリクス取得ができないため、Metrics Servletを有効にして、そこから情報取得ができるようにする必要があります。設定方法はCDH3でのMetrics Servletの設定と同様です。
 
-** TaskTrackerポートの固定
+## TaskTrackerポートの固定
 CDH3向け設定と同様の設定を行います。設定を終えたらTaskTrackerを再起動してください。
 
 
