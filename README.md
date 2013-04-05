@@ -25,6 +25,8 @@ Zabbix Hadoop Monitor
      *  $ sudo yum install perl-JSON
 
 
+# 1. 導入方法
+
 ## Hadoop and HBase 事前設定
 
 Hadoopサービスから本ツールがメトリクスを取得できるようするため、以下の設定を行います。
@@ -80,6 +82,7 @@ TaskTrackerから取得するメトリクス名を固定するため、mapred-si
 
 * この設定を行う趣旨は以下のブログに書いているので、そちらをご覧ください。
  * http://sechiro.hatenablog.com/entry/20120411/1334094242
+
 
 ## 本ツールの導入
 
