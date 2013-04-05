@@ -25,7 +25,7 @@ Zabbix Hadoop Monitor
      *  $ sudo yum install perl-JSON
 
 
-# 1. 導入方法
+1. 導入方法
 
 ## Hadoop and HBase 事前設定
 
