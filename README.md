@@ -16,6 +16,7 @@ Zabbix Hadoop Monitor
 * 監視対象となるHadoop、HBaseが正常に動作していること。
 * Zabbixサーバがセットアップされ、外部スクリプトによる情報収集が可能になっていること。
     * このスクリプトはZabbix 1.8 および Zabbix 2.0 の両方に対応しています。ただし、Zabbix 2.0 での動作確認がまだできていません。Zabbix 2.0 でもスクリプト起動用のアイテムだけ手動で修正すれば動くはずです。
+    * 参考情報： http://thinkit.co.jp/story/2012/04/27/3535?page=0,1
 * ZabbixサーバにPerlのJSONモジュールがインストールされていること。
     * スクリプト内部でPerlのJSONモジュールを使用します。導入されていない場合は、適宜インストールを行ってください。
         * 例：CentOSのリポジトリからインストールを行う場合
@@ -99,6 +100,8 @@ Hadoopが提供しているメトリクスの中のRPC Detailed Metricsに分類
 ```
  $ ./get_hadoop_jmx.pl dummy_arg hostname port --nosend | ./convert_to_hadoop_tmpl.pl > template_name.xml
 ```
+
+Zabbix 1.8 では、外部スクリプトの第一引数にそのアイテムが属しているホストのIPかDNS名が入りますが、このスクリプトではそれを利用していないため、スクリプトの第一引数には任意のものをダミーで入力してください。
 
 たとえば、QJMを使ったNamenode HA構成では、Journalnodeへの書き込み遅延に関するメトリクスが取得可能です。ただし、そのメトリクス名がJournalnodeのIPアドレスとポート番号に依存するため、その環境でテンプレートの生成を行う必要があります。
 
