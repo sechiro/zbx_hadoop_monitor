@@ -46,7 +46,7 @@ my @service_name_list = keys %service_name_hash;
 my $PROCESSNAME = uc $processName;
 
 my $kind = 'Hadoop';
-# $kind = 'HBase' if ( $PROCESSNAME eq "REGIONSERVER" || $PROCESSNAME eq "MASTER" ) ;
+$kind = 'HBase' if ( $PROCESSNAME eq "REGIONSERVER" || $PROCESSNAME eq "MASTER" ) ;
 
 my $common_conf = do("zbx_tmpl_common.conf");
 my $item_header = $common_conf->{'item_header'};
