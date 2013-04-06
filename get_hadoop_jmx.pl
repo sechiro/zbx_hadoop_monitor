@@ -75,7 +75,7 @@ if ( $processName eq "TaskTracker" ){
 }
 
 # Parse raw JSON data to Zabbix infile format
-my @values = &parse_hadoop_jmx_metrics($mxbean_object_list, $hostname, $processName, $get_detail, $get_javalang, $debug_output);
+my @values = &parse_hadoop_jmx_metrics($mxbean_object_list, $zabbix_hostname, $processName, $get_detail, $get_javalang, $debug_output);
 
 # Output stdout only
 if ( $nosend == 1 ){
@@ -93,7 +93,7 @@ if (!-d $infile_tmp_dir) {
     exit 0;
 }
 
-my $zabbix_sender_infile = "$infile_tmp_dir/$hostname-$port.jmx-infile.dat";
+my $zabbix_sender_infile = "$infile_tmp_dir/$zabbix_hostname-$port.jmx-infile.dat";
 open my $infile_fh, ">", "$zabbix_sender_infile"
     or die "[ERROR] Couldn't open $zabbix_sender_infile in /tmp !";
 
