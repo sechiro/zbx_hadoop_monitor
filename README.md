@@ -7,8 +7,9 @@ Zabbix Hadoop Monitor
 
 * CDH3u6
 * CDH4.2 + MRv1
-
-    * HBase向けのものもいずれ出す予定です。
+* CDH4.2 + MRv1 + HBase 0.94.2
+    * ただし、Coprocessorのメトリクスの確認ができていません。手元にCoprocessorを使った環境がないので…。現在はCoprocessorメトリクスの数のみカウントしています。
+    * HBase Master から取得できるRegionserverの状態のメトリクスは、動作中のRegionserver数、停止しているRegionserverの数のみの取得としています。
 
 
 ## 動作に必要な前提条件

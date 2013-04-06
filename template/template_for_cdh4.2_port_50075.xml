@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<zabbix_export version="1.0" date="13.04.07" time="01.01">
+<zabbix_export version="1.0" date="13.04.07" time="01.54">
   <hosts>
     <host name="Hadoop_DataNode_JMX">
       <proxy_hostid>0</proxy_hostid>
@@ -939,6 +939,28 @@
           <trends>365</trends>
           <applications>
             <application>Hadoop DataNode DataNodeInfo</application>
+          </applications>
+        </item>
+        <item type="2" key="DataNode.RpcDetailedActivity.GetReplicaVisibleLengthAvgTime" value_type="0">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>DataNode.RpcDetailedActivity.GetReplicaVisibleLengthAvgTime</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop DataNode RpcDetailedActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="DataNode.RpcDetailedActivity.GetReplicaVisibleLengthNumOps" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>DataNode.RpcDetailedActivity.GetReplicaVisibleLengthNumOps</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop DataNode RpcDetailedActivity</application>
           </applications>
         </item>
         <item type="2" key="DataNode.JvmMetrics.LogFatal" value_type="3">

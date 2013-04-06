@@ -314,7 +314,17 @@ sub parse_hadoop_jmx_metrics{
                     $attribute = "TasksInfo";
                     foreach my $key ( keys( %$items ) ){
                         push(@values, "\"$zabbix_hostname\" $service_name.$mxbean_name.$attribute.$key $$items{$key}\n");
-                        }
+                    }
+
+                # count dead HBase regionservers and Coprocessors
+                } elsif ( $attribute eq "DeadRegionServers" || $attribute eq "RegionServers" || $attribute eq "Coprocessors") {
+                    # Raw output
+                    my $value = $$mxbean_object{$attribute};
+                    #push(@values, "\"$zabbix_hostname\" $service_name.$mxbean_name.$attribute '$value'\n");
+
+                    # count dirs number
+                    my $dead_regionservers = $$mxbean_object{$attribute};
+                    push(@values, "\"$zabbix_hostname\" $service_name.$mxbean_name.$attribute.count " . scalar @$dead_regionservers . "\n");
 
                 } else {
                     my $value = $$mxbean_object{$attribute};
