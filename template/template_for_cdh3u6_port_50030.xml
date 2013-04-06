@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<zabbix_export version="1.0" date="13.04.07" time="00.30">
+<zabbix_export version="1.0" date="13.04.07" time="01.01">
   <hosts>
     <host name="Hadoop_JobTracker_JMX">
       <proxy_hostid>0</proxy_hostid>
@@ -279,6 +279,226 @@
           <trends>365</trends>
           <applications>
             <application>Hadoop JobTracker RpcActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="JobTracker.RpcDetailedActivity.getBuildVersionMinTime" value_type="0">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>JobTracker.RpcDetailedActivity.getBuildVersionMinTime</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop JobTracker RpcDetailedActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="JobTracker.RpcDetailedActivity.heartbeatAvgTime" value_type="0">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>JobTracker.RpcDetailedActivity.heartbeatAvgTime</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop JobTracker RpcDetailedActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="JobTracker.RpcDetailedActivity.getBuildVersionAvgTime" value_type="0">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>JobTracker.RpcDetailedActivity.getBuildVersionAvgTime</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop JobTracker RpcDetailedActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="JobTracker.RpcDetailedActivity.getProtocolVersionNumOps" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>JobTracker.RpcDetailedActivity.getProtocolVersionNumOps</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop JobTracker RpcDetailedActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="JobTracker.RpcDetailedActivity.heartbeatMaxTime" value_type="0">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>JobTracker.RpcDetailedActivity.heartbeatMaxTime</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop JobTracker RpcDetailedActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="JobTracker.RpcDetailedActivity.getProtocolVersionMinTime" value_type="0">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>JobTracker.RpcDetailedActivity.getProtocolVersionMinTime</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop JobTracker RpcDetailedActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="JobTracker.RpcDetailedActivity.getVIVersionMinTime" value_type="0">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>JobTracker.RpcDetailedActivity.getVIVersionMinTime</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop JobTracker RpcDetailedActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="JobTracker.RpcDetailedActivity.getBuildVersionNumOps" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>JobTracker.RpcDetailedActivity.getBuildVersionNumOps</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop JobTracker RpcDetailedActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="JobTracker.RpcDetailedActivity.getSystemDirNumOps" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>JobTracker.RpcDetailedActivity.getSystemDirNumOps</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop JobTracker RpcDetailedActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="JobTracker.RpcDetailedActivity.heartbeatMinTime" value_type="0">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>JobTracker.RpcDetailedActivity.heartbeatMinTime</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop JobTracker RpcDetailedActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="JobTracker.RpcDetailedActivity.getBuildVersionMaxTime" value_type="0">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>JobTracker.RpcDetailedActivity.getBuildVersionMaxTime</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop JobTracker RpcDetailedActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="JobTracker.RpcDetailedActivity.getVIVersionAvgTime" value_type="0">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>JobTracker.RpcDetailedActivity.getVIVersionAvgTime</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop JobTracker RpcDetailedActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="JobTracker.RpcDetailedActivity.getVIVersionNumOps" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>JobTracker.RpcDetailedActivity.getVIVersionNumOps</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop JobTracker RpcDetailedActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="JobTracker.RpcDetailedActivity.heartbeatNumOps" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>JobTracker.RpcDetailedActivity.heartbeatNumOps</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop JobTracker RpcDetailedActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="JobTracker.RpcDetailedActivity.getProtocolVersionAvgTime" value_type="0">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>JobTracker.RpcDetailedActivity.getProtocolVersionAvgTime</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop JobTracker RpcDetailedActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="JobTracker.RpcDetailedActivity.getProtocolVersionMaxTime" value_type="0">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>JobTracker.RpcDetailedActivity.getProtocolVersionMaxTime</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop JobTracker RpcDetailedActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="JobTracker.RpcDetailedActivity.getSystemDirMinTime" value_type="0">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>JobTracker.RpcDetailedActivity.getSystemDirMinTime</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop JobTracker RpcDetailedActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="JobTracker.RpcDetailedActivity.getVIVersionMaxTime" value_type="0">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>JobTracker.RpcDetailedActivity.getVIVersionMaxTime</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop JobTracker RpcDetailedActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="JobTracker.RpcDetailedActivity.getSystemDirAvgTime" value_type="0">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>JobTracker.RpcDetailedActivity.getSystemDirAvgTime</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop JobTracker RpcDetailedActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="JobTracker.RpcDetailedActivity.getSystemDirMaxTime" value_type="0">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>JobTracker.RpcDetailedActivity.getSystemDirMaxTime</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop JobTracker RpcDetailedActivity</application>
           </applications>
         </item>
         <item type="2" key="JobTracker.JobTrackerInfo.ThreadCount" value_type="3">

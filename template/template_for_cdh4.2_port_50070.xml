@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<zabbix_export version="1.0" date="13.04.07" time="00.30">
+<zabbix_export version="1.0" date="13.04.07" time="01.01">
   <hosts>
     <host name="Hadoop_NameNode_JMX">
       <proxy_hostid>0</proxy_hostid>
@@ -532,6 +532,358 @@
           <trends>365</trends>
           <applications>
             <application>Hadoop NameNode UgiMetrics</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.RpcDetailedActivity.SendHeartbeatNumOps" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.RpcDetailedActivity.SendHeartbeatNumOps</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode RpcDetailedActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.RpcDetailedActivity.BlockReceivedAndDeletedNumOps" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.RpcDetailedActivity.BlockReceivedAndDeletedNumOps</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode RpcDetailedActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.RpcDetailedActivity.CompleteNumOps" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.RpcDetailedActivity.CompleteNumOps</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode RpcDetailedActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.RpcDetailedActivity.AddBlockNumOps" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.RpcDetailedActivity.AddBlockNumOps</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode RpcDetailedActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.RpcDetailedActivity.GetFileInfoNumOps" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.RpcDetailedActivity.GetFileInfoNumOps</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode RpcDetailedActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.RpcDetailedActivity.CreateAvgTime" value_type="0">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.RpcDetailedActivity.CreateAvgTime</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode RpcDetailedActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.RpcDetailedActivity.SetPermissionNumOps" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.RpcDetailedActivity.SetPermissionNumOps</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode RpcDetailedActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.RpcDetailedActivity.RollEditLogNumOps" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.RpcDetailedActivity.RollEditLogNumOps</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode RpcDetailedActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.RpcDetailedActivity.GetTransactionIdNumOps" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.RpcDetailedActivity.GetTransactionIdNumOps</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode RpcDetailedActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.RpcDetailedActivity.SendHeartbeatAvgTime" value_type="0">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.RpcDetailedActivity.SendHeartbeatAvgTime</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode RpcDetailedActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.RpcDetailedActivity.GetServerDefaultsAvgTime" value_type="0">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.RpcDetailedActivity.GetServerDefaultsAvgTime</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode RpcDetailedActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.RpcDetailedActivity.RollEditLogAvgTime" value_type="0">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.RpcDetailedActivity.RollEditLogAvgTime</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode RpcDetailedActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.RpcDetailedActivity.GetFileInfoAvgTime" value_type="0">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.RpcDetailedActivity.GetFileInfoAvgTime</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode RpcDetailedActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.RpcDetailedActivity.GetServerDefaultsNumOps" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.RpcDetailedActivity.GetServerDefaultsNumOps</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode RpcDetailedActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.RpcDetailedActivity.BlockReportAvgTime" value_type="0">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.RpcDetailedActivity.BlockReportAvgTime</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode RpcDetailedActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.RpcDetailedActivity.VersionRequestNumOps" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.RpcDetailedActivity.VersionRequestNumOps</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode RpcDetailedActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.RpcDetailedActivity.GetListingNumOps" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.RpcDetailedActivity.GetListingNumOps</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode RpcDetailedActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.RpcDetailedActivity.BlockReceivedAndDeletedAvgTime" value_type="0">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.RpcDetailedActivity.BlockReceivedAndDeletedAvgTime</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode RpcDetailedActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.RpcDetailedActivity.RegisterDatanodeNumOps" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.RpcDetailedActivity.RegisterDatanodeNumOps</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode RpcDetailedActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.RpcDetailedActivity.SetPermissionAvgTime" value_type="0">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.RpcDetailedActivity.SetPermissionAvgTime</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode RpcDetailedActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.RpcDetailedActivity.GetTransactionIdAvgTime" value_type="0">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.RpcDetailedActivity.GetTransactionIdAvgTime</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode RpcDetailedActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.RpcDetailedActivity.CompleteAvgTime" value_type="0">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.RpcDetailedActivity.CompleteAvgTime</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode RpcDetailedActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.RpcDetailedActivity.CreateNumOps" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.RpcDetailedActivity.CreateNumOps</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode RpcDetailedActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.RpcDetailedActivity.AddBlockAvgTime" value_type="0">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.RpcDetailedActivity.AddBlockAvgTime</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode RpcDetailedActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.RpcDetailedActivity.GetEditLogManifestAvgTime" value_type="0">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.RpcDetailedActivity.GetEditLogManifestAvgTime</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode RpcDetailedActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.RpcDetailedActivity.BlockReportNumOps" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.RpcDetailedActivity.BlockReportNumOps</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode RpcDetailedActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.RpcDetailedActivity.VersionRequestAvgTime" value_type="0">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.RpcDetailedActivity.VersionRequestAvgTime</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode RpcDetailedActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.RpcDetailedActivity.MkdirsNumOps" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.RpcDetailedActivity.MkdirsNumOps</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode RpcDetailedActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.RpcDetailedActivity.MkdirsAvgTime" value_type="0">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.RpcDetailedActivity.MkdirsAvgTime</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode RpcDetailedActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.RpcDetailedActivity.GetListingAvgTime" value_type="0">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.RpcDetailedActivity.GetListingAvgTime</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode RpcDetailedActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.RpcDetailedActivity.RegisterDatanodeAvgTime" value_type="0">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.RpcDetailedActivity.RegisterDatanodeAvgTime</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode RpcDetailedActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.RpcDetailedActivity.GetEditLogManifestNumOps" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.RpcDetailedActivity.GetEditLogManifestNumOps</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode RpcDetailedActivity</application>
           </applications>
         </item>
         <item type="2" key="NameNode.FSNamesystemState.FilesTotal" value_type="3">
