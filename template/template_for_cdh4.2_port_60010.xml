@@ -5049,7 +5049,7 @@
       <macros>
         <macro>
           <value>60010</value>
-          <name>{$HBASEPORT}</name>
+          <name>{$HBASEMASTERPORT}</name>
         </macro>
       </macros>
     </host>

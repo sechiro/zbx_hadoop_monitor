@@ -7992,7 +7992,7 @@
       <macros>
         <macro>
           <value>60030</value>
-          <name>{$HBASEPORT}</name>
+          <name>{$HBASEREGIONSERVERPORT}</name>
         </macro>
       </macros>
     </host>
