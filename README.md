@@ -109,6 +109,7 @@ Hadoopが提供しているメトリクスの中のRPC Detailed Metricsに分類
 たとえば、QJMを使ったNamenode HA構成では、Journalnodeへの書き込み遅延に関するメトリクスが取得可能です。ただし、そのメトリクス名がJournalnodeのIPアドレスとポート番号に依存するため、その環境でテンプレートの生成を行う必要があります。
 
 
+----
 # Copyright and license
 
 Copyright 2013 Seiichiro, Ishida
