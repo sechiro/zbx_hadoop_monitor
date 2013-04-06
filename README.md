@@ -9,85 +9,27 @@ Zabbix Hadoop Monitor
 
 ## What is it?
 
-このツールは、ZabbixにてHadoopとHBaseのメトリクスを収集するためのツールです。Zabbixの外部スクリプトとして動作します。以下の環境で動作確認をしています。
+このツールは、ZabbixにてHadoopのメトリクスを収集するためのツールです。Zabbixの外部スクリプトとして動作します。以下の環境で動作確認をしています。
 
 * CDH3
 * CDH4 + MRv1
 
+    * HBase向けのものも鋭意製作中です。
+
 
 ## 動作に必要な前提条件
 
-* 監視対象となるHadoop、HBaseが正常に動作し、後述する事前設定が済んでいること。
+* 監視対象となるHadoop、HBaseが正常に動作していること。
 * Zabbixサーバがセットアップされ、外部スクリプトによる情報収集が可能になっていること。
+    * このスクリプトはZabbix 1.8 および Zabbix 2.0 の両方に対応しています。ただし、Zabbix 2.0 向けのテンプレートおよびテンプレート生成スクリプトがまだ用意できていません。
 * ZabbixサーバにPerlのJSONモジュールがインストールされていること。
-* スクリプト内部でPerlのJSONモジュールを使用します。導入されていない場合は、適宜インストールを行ってください。
- * 例：CentOSのリポジトリからインストールを行う場合
-     *  $ sudo yum install perl-JSON
+    * スクリプト内部でPerlのJSONモジュールを使用します。導入されていない場合は、適宜インストールを行ってください。
+        * 例：CentOSのリポジトリからインストールを行う場合
+            * $ sudo yum install perl-JSON
 
 <br>
 # 1. 導入方法
-
-## 1.1 Hadoop and HBase 事前設定
-
-Hadoopサービスから本ツールがメトリクスを取得できるようするため、以下の設定を行います。
-
-### 1.1.1 CDH3向け設定
-CDH3に対する情報収集を行う場合は、Metrics Servletを有効にして、そこから情報取得ができるようにする必要があります。
-すでにGangliaでのメトリクス収集を行っている場合は、Metrics Servletも同時に有効になっているので、追加の設定は必要ありません。
-
-Metrics Servletのみ有効にする場合は、メトリクス設定ファイルに設定を記述してラスタ全体に配布し、該当のHadoopサービスの再起動を行ってください。
-
-/etc/hadoop/conf/hadoop-metrics.properties
-
-    dfs.class=org.apache.hadoop.metrics.spi.NoEmitMetricsContext
-    dfs.period=30
-    mapred.class=org.apache.hadoop.metrics.spi.NoEmitMetricsContext
-    mapred.period=30
-    jvm.class=org.apache.hadoop.metrics.spi.NoEmitMetricsContext
-    jvm.period=30
-    rpc.class=org.apache.hadoop.metrics.spi.NoEmitMetricsContext
-    rpc.period=30
-    ugi.class=org.apache.hadoop.metrics.spi.NoEmitMetricsContext
-    ugi.period=30
-
-
-/etc/hbase/conf/hadoop-metrics.properties
-
-    hbase.class=org.apache.hadoop.metrics.spi.NoEmitMetricsContext
-    hbase.period=30
-    jvm.class=org.apache.hadoop.metrics.spi.NoEmitMetricsContext
-    jvm.period=30
-    rpc.class=org.apache.hadoop.metrics.spi.NoEmitMetricsContext
-    rpc.period=30
-    ugi.class=org.apache.hadoop.metrics.spi.NoEmitMetricsContext
-    ugi.period=30
-
-
-
-### 1.1.2 CDH4向け設定
-#### HDFS(Namenode, SecondaryNamenode, Datanode, Journalnode)
-これらのコンポーネントはデフォルトでJMX Servletによるメトリクス取得ができるようになっています。そのため、特に追加の設定は必要ありません。
-
-#### それ以外（JobTracker、TaskTracker、HBase Master、HBase Regionserver）
-これらのコンポーネントは、JMX Servletによるメトリクス取得ができないため、Metrics Servletを有効にして、そこから情報取得ができるようにする必要があります。設定方法はCDH3でのMetrics Servletの設定と同様です。
-
-
-
-### 1.1.3 CDH3、CDH4共通：TaskTracker内部通信ポートの固定
-TaskTrackerから取得するメトリクス名を固定するため、mapred-site.xmlに以下の設定を加え、クラスタ全体に配布します。設定を終えたら、TaskTrackerを再起動してください。
-
-    <property>
-      <name>mapred.task.tracker.report.port</name>
-      <value>50050</value>
-    </property>
-
-* この設定を行う趣旨は以下のブログに書いているので、そちらをご覧ください。
- * http://sechiro.hatenablog.com/entry/20120411/1334094242
-
-
-## 1.2 本ツールの導入
-
-### 1.2.1 情報収集スクリプトの配置 
+## 1.1 情報収集スクリプトの配置 
 
 Zabbixサーバの外部スクリプトディレクトリが "/etc/zabbix/externalscripts" となっている環境であれば、以下のコマンドにてスクリプトの配置を行うことができます。
 
@@ -97,13 +39,22 @@ Zabbixサーバの外部スクリプトディレクトリが "/etc/zabbix/extern
  $ ./install.sh
 ```
 
-上記以外をZabbixサーバの外部スクリプトディレクトリとしている場合は、手動で以下のようにファイルを配置してください。
+上記以外をZabbixサーバの外部スクリプトディレクトリとしている場合は、手動でファイルを配置してください。
+
+Zabbix 2.0 で利用する場合は、スクリプトの以下の箇所を書き換えてください。Zabbix 2.0 では、外部スクリプトに渡す引数の仕様が変更になっているため、このバージョン指定が必要になっています。
+
+    my $zabbix_server_version = 1.8;
+
+        ↓
+
+    my $zabbix_server_version = 2.0;
 
 
-### 1.2.2 Zabbixテンプレートのインポート
+### 1.2 Zabbixテンプレートのインポート
 
 本サイトのtemplateディレクトリに配置されているXMLファイルをZabbixよりインポートしてください。
-（配布しているテンプレートは、標準的な構成のみに対応したものになります。その中に含まれないメトリクスを監視する場合は、添付ツールにてテンプレートを生成する必要があります）
+
+ただし、このリポジトリで配布しているテンプレートは、標準的な構成のみに対応したものになります。Namenode HAでのQJMへのメタデータ書き込み状況など、その中に含まれないメトリクスを監視する場合は、添付ツールにてテンプレートを生成する必要があります。
 
 
 ### 1.2.3 監視対象へのテンプレート適用
@@ -121,24 +72,25 @@ Zabbixサーバの外部スクリプトディレクトリが "/etc/zabbix/extern
 
 
 ## スクリプトオプション
-このツールには以下のオプションがあります。（特に明記されていないものは、スクリプト共通のオプションです）
+このツールには以下のオプションがあります。オプションはこのスクリプトを直接実行する場合だけでなく、Zabbix上から実行する場合にも指定出来ます。Zabbix上からオプション付きで実行する場合は、Zabbixの外部スクリプト実行用のアイテムにオプションをそのまま記述してください。
 
 * --detailed
-detailed metrics
+
+Hadoopが提供しているメトリクスの中のRPC Detailed Metricsに分類されているものを収集するオプションです。
+
 メソッドごとの実行時間などの詳細なデータを取得することができますが、取得データ量が多くなってしまうため、デフォルトでは取得しないようになっています。
-
-* --javalang (get_hadoop_jmx.pl only)
-
-JMX Servlet 経由で取得できる情報には、Hadoopサービス固有のもののほかに、一般的なJMXの値も含めまれています。そのうち、"java.lang"に分類されているヒープ使用量等を追加取得するためのオプションです。Hadoopサービス固有のメトリクスと重なっている部分が多いため、デフォルトではオフになっています。
 
 * --nosend
 
-取得結果をZabbixに送信せず、標準出力に出力するオプションです。
+取得結果をZabbixに送信せず、標準出力に出力するオプションです。スクリプト単体での動作確認やテンプレート生成スクリプトにデータを渡す際に利用します。
 
 * --dump_json
 
 スクリプトデバッグ用のオプションです。標準エラー出力にJSONデータのDumpを出力します。
 
+* --debug_output
+
+こちらもスクリプトデバッグ用のオプションです。通常は使用しないJSONデータも、Zabbixに送信するデータ形式に変換し、標準出力に出力します。
 
 ## Zabbix Proxy構成への対応
 このツールはZabbix Proxy構成でも動作します。その場合は、ここで紹介しているインストール手順に準じて、Zabbix Proxyの外部スクリプトディレクトリにスクリプトを配置してください。
@@ -156,8 +108,4 @@ JMX Servlet 経由で取得できる情報には、Hadoopサービス固有の�
 
 たとえば、QJMを使ったNamenode HA構成では、Journalnodeへの書き込み遅延に関するメトリクスが取得可能です。ただし、そのメトリクス名がJournalnodeのIPアドレスとポート番号に依存するため、その環境でテンプレートの生成を行う必要があります。
 
-
-## グラフ、トリガー設定も含めた自動生成
-
-取得対象に合わせたコンフィグファイルを作成することで、グラフやトリガーを含んだテンプレートを生成することができます。使い方は申し訳ないですが、ソースコードを参照してください。
 
