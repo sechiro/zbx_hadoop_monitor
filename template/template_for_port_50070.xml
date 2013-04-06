@@ -1,0 +1,934 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export version="1.0" date="13.04.06" time="20.40">
+  <hosts>
+    <host name="Hadoop_NameNode_JMX">
+      <proxy_hostid>0</proxy_hostid>
+      <useip>1</useip>
+      <dns></dns>
+      <ip>127.0.0.1</ip>
+      <port>10050</port>
+      <status>3</status>
+      <useipmi>0</useipmi>
+      <ipmi_ip>127.0.0.1</ipmi_ip>
+      <ipmi_port>623</ipmi_port>
+      <ipmi_authtype>0</ipmi_authtype>
+      <ipmi_privilege>2</ipmi_privilege>
+      <ipmi_username></ipmi_username>
+      <ipmi_password></ipmi_password>
+      <groups>
+        <group>Templates</group>
+      </groups><items>        <item type="2" key="NameNode.Memory.HeapMemoryUsage.committed" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.Memory.HeapMemoryUsage.committed</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode Memory</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.Memory.HeapMemoryUsage.used" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.Memory.HeapMemoryUsage.used</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode Memory</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.Memory.HeapMemoryUsage.max" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.Memory.HeapMemoryUsage.max</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode Memory</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.Memory.HeapMemoryUsage.init" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.Memory.HeapMemoryUsage.init</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode Memory</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.Memory.NonHeapMemoryUsage.committed" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.Memory.NonHeapMemoryUsage.committed</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode Memory</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.Memory.NonHeapMemoryUsage.used" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.Memory.NonHeapMemoryUsage.used</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode Memory</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.Memory.NonHeapMemoryUsage.max" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.Memory.NonHeapMemoryUsage.max</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode Memory</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.Memory.NonHeapMemoryUsage.init" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.Memory.NonHeapMemoryUsage.init</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode Memory</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.RpcActivity.SentBytes" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.RpcActivity.SentBytes</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode RpcActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.RpcActivity.RpcProcessingTimeAvgTime" value_type="0">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.RpcActivity.RpcProcessingTimeAvgTime</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode RpcActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.RpcActivity.RpcQueueTimeMinTime" value_type="0">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.RpcActivity.RpcQueueTimeMinTime</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode RpcActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.RpcActivity.RpcProcessingTimeMinTime" value_type="0">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.RpcActivity.RpcProcessingTimeMinTime</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode RpcActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.RpcActivity.callQueueLen" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.RpcActivity.callQueueLen</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode RpcActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.RpcActivity.rpcAuthorizationSuccesses" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.RpcActivity.rpcAuthorizationSuccesses</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode RpcActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.RpcActivity.rpcAuthorizationFailures" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.RpcActivity.rpcAuthorizationFailures</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode RpcActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.RpcActivity.ReceivedBytes" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.RpcActivity.ReceivedBytes</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode RpcActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.RpcActivity.RpcQueueTimeMaxTime" value_type="0">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.RpcActivity.RpcQueueTimeMaxTime</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode RpcActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.RpcActivity.RpcQueueTimeAvgTime" value_type="0">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.RpcActivity.RpcQueueTimeAvgTime</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode RpcActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.RpcActivity.RpcQueueTimeNumOps" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.RpcActivity.RpcQueueTimeNumOps</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode RpcActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.RpcActivity.RpcProcessingTimeMaxTime" value_type="0">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.RpcActivity.RpcProcessingTimeMaxTime</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode RpcActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.RpcActivity.rpcAuthenticationSuccesses" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.RpcActivity.rpcAuthenticationSuccesses</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode RpcActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.RpcActivity.rpcAuthenticationFailures" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.RpcActivity.rpcAuthenticationFailures</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode RpcActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.RpcActivity.RpcProcessingTimeNumOps" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.RpcActivity.RpcProcessingTimeNumOps</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode RpcActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.RpcActivity.NumOpenConnections" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.RpcActivity.NumOpenConnections</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode RpcActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.FSNamesystemState.FilesTotal" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.FSNamesystemState.FilesTotal</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode FSNamesystemState</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.FSNamesystemState.FSState" value_type="1">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.FSNamesystemState.FSState</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode FSNamesystemState</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.FSNamesystemState.CapacityTotal" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.FSNamesystemState.CapacityTotal</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode FSNamesystemState</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.FSNamesystemState.BlocksTotal" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.FSNamesystemState.BlocksTotal</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode FSNamesystemState</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.FSNamesystemState.PendingReplicationBlocks" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.FSNamesystemState.PendingReplicationBlocks</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode FSNamesystemState</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.FSNamesystemState.ScheduledReplicationBlocks" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.FSNamesystemState.ScheduledReplicationBlocks</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode FSNamesystemState</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.FSNamesystemState.CapacityRemaining" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.FSNamesystemState.CapacityRemaining</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode FSNamesystemState</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.FSNamesystemState.TotalLoad" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.FSNamesystemState.TotalLoad</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode FSNamesystemState</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.FSNamesystemState.CapacityUsed" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.FSNamesystemState.CapacityUsed</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode FSNamesystemState</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.FSNamesystemState.UnderReplicatedBlocks" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.FSNamesystemState.UnderReplicatedBlocks</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode FSNamesystemState</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.NameNodeInfo.DeadNodes.count" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.NameNodeInfo.DeadNodes.count</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode NameNodeInfo</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.NameNodeInfo.UpgradeFinalized" value_type="1">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.NameNodeInfo.UpgradeFinalized</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode NameNodeInfo</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.NameNodeInfo.Free" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.NameNodeInfo.Free</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode NameNodeInfo</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.NameNodeInfo.Threads" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.NameNodeInfo.Threads</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode NameNodeInfo</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.NameNodeInfo.DecomNodes.count" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.NameNodeInfo.DecomNodes.count</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode NameNodeInfo</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.NameNodeInfo.LiveNodes.count" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.NameNodeInfo.LiveNodes.count</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode NameNodeInfo</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.NameNodeInfo.Used" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.NameNodeInfo.Used</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode NameNodeInfo</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.NameNodeInfo.Total" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.NameNodeInfo.Total</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode NameNodeInfo</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.NameNodeInfo.PercentUsed" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.NameNodeInfo.PercentUsed</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode NameNodeInfo</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.NameNodeInfo.PercentUsed" value_type="0">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.NameNodeInfo.PercentUsed</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode NameNodeInfo</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.NameNodeInfo.NameDirStatuses" value_type="1">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.NameNodeInfo.NameDirStatuses</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode NameNodeInfo</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.NameNodeInfo.NameDirStatuses.failed_count" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.NameNodeInfo.NameDirStatuses.failed_count</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode NameNodeInfo</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.NameNodeInfo.NameDirStatuses.active_count" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.NameNodeInfo.NameDirStatuses.active_count</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode NameNodeInfo</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.NameNodeInfo.HostName" value_type="1">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.NameNodeInfo.HostName</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode NameNodeInfo</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.NameNodeInfo.NonDfsUsedSpace" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.NameNodeInfo.NonDfsUsedSpace</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode NameNodeInfo</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.NameNodeInfo.PercentRemaining" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.NameNodeInfo.PercentRemaining</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode NameNodeInfo</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.NameNodeInfo.PercentRemaining" value_type="0">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.NameNodeInfo.PercentRemaining</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode NameNodeInfo</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.NameNodeInfo.TotalBlocks" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.NameNodeInfo.TotalBlocks</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode NameNodeInfo</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.NameNodeInfo.Version" value_type="1">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.NameNodeInfo.Version</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode NameNodeInfo</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.NameNodeInfo.Safemode" value_type="1">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.NameNodeInfo.Safemode</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode NameNodeInfo</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.NameNodeInfo.TotalFiles" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.NameNodeInfo.TotalFiles</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode NameNodeInfo</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.NameNodeActivity.blockReportAvgTime" value_type="0">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.NameNodeActivity.blockReportAvgTime</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode NameNodeActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.NameNodeActivity.SafemodeTime" value_type="0">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.NameNodeActivity.SafemodeTime</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode NameNodeActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.NameNodeActivity.FilesInGetListingOps" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.NameNodeActivity.FilesInGetListingOps</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode NameNodeActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.NameNodeActivity.CreateFileOps" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.NameNodeActivity.CreateFileOps</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode NameNodeActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.NameNodeActivity.SyncsAvgTime" value_type="0">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.NameNodeActivity.SyncsAvgTime</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode NameNodeActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.NameNodeActivity.FilesRenamed" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.NameNodeActivity.FilesRenamed</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode NameNodeActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.NameNodeActivity.FilesAppended" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.NameNodeActivity.FilesAppended</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode NameNodeActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.NameNodeActivity.TransactionsNumOps" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.NameNodeActivity.TransactionsNumOps</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode NameNodeActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.NameNodeActivity.FilesCreated" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.NameNodeActivity.FilesCreated</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode NameNodeActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.NameNodeActivity.TransactionsAvgTime" value_type="0">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.NameNodeActivity.TransactionsAvgTime</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode NameNodeActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.NameNodeActivity.DeleteFileOps" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.NameNodeActivity.DeleteFileOps</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode NameNodeActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.NameNodeActivity.TransactionsMaxTime" value_type="0">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.NameNodeActivity.TransactionsMaxTime</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode NameNodeActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.NameNodeActivity.JournalTransactionsBatchedInSync" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.NameNodeActivity.JournalTransactionsBatchedInSync</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode NameNodeActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.NameNodeActivity.SyncsMaxTime" value_type="0">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.NameNodeActivity.SyncsMaxTime</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode NameNodeActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.NameNodeActivity.SyncsMinTime" value_type="0">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.NameNodeActivity.SyncsMinTime</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode NameNodeActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.NameNodeActivity.GetListingOps" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.NameNodeActivity.GetListingOps</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode NameNodeActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.NameNodeActivity.SyncsNumOps" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.NameNodeActivity.SyncsNumOps</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode NameNodeActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.NameNodeActivity.FileInfoOps" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.NameNodeActivity.FileInfoOps</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode NameNodeActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.NameNodeActivity.blockReportMinTime" value_type="0">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.NameNodeActivity.blockReportMinTime</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode NameNodeActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.NameNodeActivity.blockReportNumOps" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.NameNodeActivity.blockReportNumOps</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode NameNodeActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.NameNodeActivity.blockReportMaxTime" value_type="0">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.NameNodeActivity.blockReportMaxTime</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode NameNodeActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.NameNodeActivity.GetBlockLocations" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.NameNodeActivity.GetBlockLocations</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode NameNodeActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.NameNodeActivity.fsImageLoadTime" value_type="0">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.NameNodeActivity.fsImageLoadTime</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode NameNodeActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.NameNodeActivity.AddBlockOps" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.NameNodeActivity.AddBlockOps</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode NameNodeActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.NameNodeActivity.TransactionsMinTime" value_type="0">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.NameNodeActivity.TransactionsMinTime</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode NameNodeActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="NameNode.NameNodeActivity.BlocksCorrupted" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>NameNode.NameNodeActivity.BlocksCorrupted</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop NameNode NameNodeActivity</application>
+          </applications>
+        </item>
+        <item type="10" key="get_hadoop_jmx.pl[{HOST.DNS} {$NAMENODEPORT} &quot;{HOSTNAME}&quot;]" value_type="1">
+          <description>Hadoop NameNode JMX Metrics 取得ログ</description>
+          <ipmi_sensor></ipmi_sensor>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <status>0</status>
+          <data_type>0</data_type>
+          <applications>
+            <application>Hadoop Monitor Script for NameNode</application>
+          </applications>
+        </item></items><graphs/><triggers/>
+      <templates/><triggers/>
+      <macros>
+        <macro>
+          <value>50070
+</value>
+          <name>{$NAMENODEPORT}</name>
+        </macro>
+      </macros>
+    </host>
+  </hosts>
+  <dependencies/>
+</zabbix_export>

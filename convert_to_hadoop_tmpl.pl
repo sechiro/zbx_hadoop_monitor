@@ -239,84 +239,8 @@ if ( $processName eq "DataNode" ){
     $item_definition = '<items>' . $metrics_items . $script_item . '</items>';
 }
 
-# Make graph item
-my $graph_conf = do("zbx_tmpl_graph.conf");
-my $graph_items = "";
-my $graphs = $graph_conf->{$processName}->{'graphs'};
-    foreach my $graph_name ( keys %$graphs ){
-    my $item_list = $graphs->{$graph_name};
-    $graph_items .= &graph_item($template_name, $graph_name, $item_list);
-}
-my $graph_definition = '<graphs>' . $graph_items . '</graphs>';
-
-sub graph_item{
-    my ($template_name, $graph_name, $item_list) = @_;
-    my $graph_header = '
-        <graph name="' . $graph_name . '" width="900" height="200">
-          <ymin_type>0</ymin_type>
-          <ymax_type>0</ymax_type>
-          <ymin_item_key></ymin_item_key>
-          <ymax_item_key></ymax_item_key>
-          <show_work_period>0</show_work_period>
-          <show_triggers>0</show_triggers>
-          <graphtype>0</graphtype>
-          <yaxismin>0.0000</yaxismin>
-          <yaxismax>100.0000</yaxismax>
-          <show_legend>0</show_legend>
-          <show_3d>0</show_3d>
-          <percent_left>0.0000</percent_left>
-          <percent_right>0.0000</percent_right>
-          <graph_elements>';
-    my @graph_elements = ();
-    my @colors = ("00AA00", "0000AA", "AA0000", "AAAA00", "00AAAA", "AA00AA");
-    for(my $i = 0; $i < @$item_list ; $i++) {
-        my $item_name = $$item_list[$i];
-        push(@graph_elements, '<graph_element item="' . $template_name . ':' . $item_name . '">
-              <drawtype>0</drawtype>
-              <sortorder>' . $i . '</sortorder>
-              <color>' . $colors[$i] . '</color>
-              <yaxisside>0</yaxisside>
-              <calc_fnc>2</calc_fnc>
-              <type>0</type>
-              <periods_cnt>5</periods_cnt>
-            </graph_element>');
-    }
-    my $graph_footer ='      </graph_elements>
-        </graph>';
-    my $result = $graph_header;
-    foreach my $element (@graph_elements){
-        $result .= $element;
-    }
-    $result .= $graph_footer;
-    return $result;
-}
-
-# Trigger
-my $trigger_conf = do("zbx_tmpl_trigger.conf");
-my $trigger_items = $common_triggers;
-my $triggers = $trigger_conf->{$processName}->{'triggers'};
-
-if ( $triggers ne 'null'){
-    foreach my $trigger_name ( keys %$triggers ){
-        my $trigger_condition = $triggers->{$trigger_name}->{'condition'};
-        my $trigger_priority = $triggers->{$trigger_name}->{'priority'};
-        $trigger_items .= &trigger_item($template_name, $trigger_name, $trigger_condition, $trigger_priority);
-    }
-}
-my $trigger_definition = '<triggers>' . $trigger_items . '</triggers>';
-sub trigger_item{
-    my ($template_name, $trigger_name, $trigger_condition, $trigger_priority) = @_;
-    my $trigger_item = '        <trigger>
-          <description>' . $trigger_name . '</description>
-          <type>1</type>
-          <expression>{' . $template_name . ':' . $trigger_condition . '</expression>
-          <url></url>
-          <status>0</status>
-          <priority>' . $trigger_priority . '</priority>
-          <comments></comments>
-        </trigger>';
-    return $trigger_item;
-}
+my $graph_definition = '<graphs/>';
+my $trigger_definition = '<triggers/>';
 
 # output
 my $zbx_tmpl = $tmpl_header . $item_definition . $graph_definition . $trigger_definition . $tmpl_footer;

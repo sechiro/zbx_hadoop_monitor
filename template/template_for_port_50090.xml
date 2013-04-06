@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export version="1.0" date="13.04.06" time="20.40">
+  <hosts>
+    <host name="Hadoop_SecondaryNameNode_JMX">
+      <proxy_hostid>0</proxy_hostid>
+      <useip>1</useip>
+      <dns></dns>
+      <ip>127.0.0.1</ip>
+      <port>10050</port>
+      <status>3</status>
+      <useipmi>0</useipmi>
+      <ipmi_ip>127.0.0.1</ipmi_ip>
+      <ipmi_port>623</ipmi_port>
+      <ipmi_authtype>0</ipmi_authtype>
+      <ipmi_privilege>2</ipmi_privilege>
+      <ipmi_username></ipmi_username>
+      <ipmi_password></ipmi_password>
+      <groups>
+        <group>Templates</group>
+      </groups><items>        <item type="2" key="SecondaryNameNode.Memory.HeapMemoryUsage.committed" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>SecondaryNameNode.Memory.HeapMemoryUsage.committed</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop SecondaryNameNode Memory</application>
+          </applications>
+        </item>
+        <item type="2" key="SecondaryNameNode.Memory.HeapMemoryUsage.used" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>SecondaryNameNode.Memory.HeapMemoryUsage.used</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop SecondaryNameNode Memory</application>
+          </applications>
+        </item>
+        <item type="2" key="SecondaryNameNode.Memory.HeapMemoryUsage.max" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>SecondaryNameNode.Memory.HeapMemoryUsage.max</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop SecondaryNameNode Memory</application>
+          </applications>
+        </item>
+        <item type="2" key="SecondaryNameNode.Memory.HeapMemoryUsage.init" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>SecondaryNameNode.Memory.HeapMemoryUsage.init</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop SecondaryNameNode Memory</application>
+          </applications>
+        </item>
+        <item type="2" key="SecondaryNameNode.Memory.NonHeapMemoryUsage.committed" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>SecondaryNameNode.Memory.NonHeapMemoryUsage.committed</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop SecondaryNameNode Memory</application>
+          </applications>
+        </item>
+        <item type="2" key="SecondaryNameNode.Memory.NonHeapMemoryUsage.used" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>SecondaryNameNode.Memory.NonHeapMemoryUsage.used</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop SecondaryNameNode Memory</application>
+          </applications>
+        </item>
+        <item type="2" key="SecondaryNameNode.Memory.NonHeapMemoryUsage.max" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>SecondaryNameNode.Memory.NonHeapMemoryUsage.max</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop SecondaryNameNode Memory</application>
+          </applications>
+        </item>
+        <item type="2" key="SecondaryNameNode.Memory.NonHeapMemoryUsage.init" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>SecondaryNameNode.Memory.NonHeapMemoryUsage.init</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop SecondaryNameNode Memory</application>
+          </applications>
+        </item>
+        <item type="10" key="get_hadoop_jmx.pl[{HOST.DNS} {$SECONDARYNAMENODEPORT} &quot;{HOSTNAME}&quot;]" value_type="1">
+          <description>Hadoop SecondaryNameNode JMX Metrics 取得ログ</description>
+          <ipmi_sensor></ipmi_sensor>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <status>0</status>
+          <data_type>0</data_type>
+          <applications>
+            <application>Hadoop Monitor Script for SecondaryNameNode</application>
+          </applications>
+        </item></items><graphs/><triggers/>
+      <templates/><triggers/>
+      <macros>
+        <macro>
+          <value>50090
+</value>
+          <name>{$SECONDARYNAMENODEPORT}</name>
+        </macro>
+      </macros>
+    </host>
+  </hosts>
+  <dependencies/>
+</zabbix_export>
