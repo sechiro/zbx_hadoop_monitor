@@ -66,7 +66,14 @@ if ( $dump_json == 1 ){
 }
 
 # Get process name
-my $processName = &get_hadoop_process_name($mxbean_object_list);
+my $processName;
+if ( $port == 60010 ){
+    $processName = "HMaster";
+} elsif ( $port == 60030 ){
+    $processName = "HRegionServer";
+} else {
+    $processName = &get_hadoop_process_name($mxbean_object_list);
+}
 
 # Get TaskTracker RPC Port Number
 my $tasktracker_rpcport;
