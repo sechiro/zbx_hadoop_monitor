@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<zabbix_export version="1.0" date="13.04.06" time="23.01">
+<zabbix_export version="1.0" date="13.04.06" time="23.25">
   <hosts>
     <host name="Hadoop_TaskTracker_JMX">
       <proxy_hostid>0</proxy_hostid>
@@ -103,182 +103,6 @@
           <trends>365</trends>
           <applications>
             <application>Hadoop TaskTracker Memory</application>
-          </applications>
-        </item>
-        <item type="2" key="TaskTracker.RpcActivity.SentBytes" value_type="3">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>TaskTracker.RpcActivity.SentBytes</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop TaskTracker RpcActivity</application>
-          </applications>
-        </item>
-        <item type="2" key="TaskTracker.RpcActivity.RpcProcessingTimeAvgTime" value_type="0">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>TaskTracker.RpcActivity.RpcProcessingTimeAvgTime</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop TaskTracker RpcActivity</application>
-          </applications>
-        </item>
-        <item type="2" key="TaskTracker.RpcActivity.RpcQueueTimeMinTime" value_type="0">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>TaskTracker.RpcActivity.RpcQueueTimeMinTime</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop TaskTracker RpcActivity</application>
-          </applications>
-        </item>
-        <item type="2" key="TaskTracker.RpcActivity.RpcProcessingTimeMinTime" value_type="0">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>TaskTracker.RpcActivity.RpcProcessingTimeMinTime</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop TaskTracker RpcActivity</application>
-          </applications>
-        </item>
-        <item type="2" key="TaskTracker.RpcActivity.callQueueLen" value_type="3">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>TaskTracker.RpcActivity.callQueueLen</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop TaskTracker RpcActivity</application>
-          </applications>
-        </item>
-        <item type="2" key="TaskTracker.RpcActivity.rpcAuthorizationSuccesses" value_type="3">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>TaskTracker.RpcActivity.rpcAuthorizationSuccesses</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop TaskTracker RpcActivity</application>
-          </applications>
-        </item>
-        <item type="2" key="TaskTracker.RpcActivity.rpcAuthorizationFailures" value_type="3">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>TaskTracker.RpcActivity.rpcAuthorizationFailures</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop TaskTracker RpcActivity</application>
-          </applications>
-        </item>
-        <item type="2" key="TaskTracker.RpcActivity.ReceivedBytes" value_type="3">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>TaskTracker.RpcActivity.ReceivedBytes</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop TaskTracker RpcActivity</application>
-          </applications>
-        </item>
-        <item type="2" key="TaskTracker.RpcActivity.RpcQueueTimeMaxTime" value_type="0">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>TaskTracker.RpcActivity.RpcQueueTimeMaxTime</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop TaskTracker RpcActivity</application>
-          </applications>
-        </item>
-        <item type="2" key="TaskTracker.RpcActivity.RpcQueueTimeAvgTime" value_type="0">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>TaskTracker.RpcActivity.RpcQueueTimeAvgTime</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop TaskTracker RpcActivity</application>
-          </applications>
-        </item>
-        <item type="2" key="TaskTracker.RpcActivity.RpcQueueTimeNumOps" value_type="3">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>TaskTracker.RpcActivity.RpcQueueTimeNumOps</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop TaskTracker RpcActivity</application>
-          </applications>
-        </item>
-        <item type="2" key="TaskTracker.RpcActivity.RpcProcessingTimeMaxTime" value_type="0">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>TaskTracker.RpcActivity.RpcProcessingTimeMaxTime</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop TaskTracker RpcActivity</application>
-          </applications>
-        </item>
-        <item type="2" key="TaskTracker.RpcActivity.rpcAuthenticationSuccesses" value_type="3">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>TaskTracker.RpcActivity.rpcAuthenticationSuccesses</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop TaskTracker RpcActivity</application>
-          </applications>
-        </item>
-        <item type="2" key="TaskTracker.RpcActivity.rpcAuthenticationFailures" value_type="3">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>TaskTracker.RpcActivity.rpcAuthenticationFailures</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop TaskTracker RpcActivity</application>
-          </applications>
-        </item>
-        <item type="2" key="TaskTracker.RpcActivity.RpcProcessingTimeNumOps" value_type="3">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>TaskTracker.RpcActivity.RpcProcessingTimeNumOps</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop TaskTracker RpcActivity</application>
-          </applications>
-        </item>
-        <item type="2" key="TaskTracker.RpcActivity.NumOpenConnections" value_type="3">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>TaskTracker.RpcActivity.NumOpenConnections</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop TaskTracker RpcActivity</application>
           </applications>
         </item>
         <item type="2" key="TaskTracker.TaskTrackerInfo.RpcPort" value_type="3">
@@ -391,7 +215,7 @@
             <application>Hadoop TaskTracker TaskTrackerInfo</application>
           </applications>
         </item>
-        <item type="10" key="get_hadoop_jmx.pl[{HOST.DNS} {$TASKTRACKERPORT} &quot;{HOSTNAME}&quot;]" value_type="1">
+        <item type="10" key="get_hadoop_jmx.pl[{HOST.CONN} {$TASKTRACKERPORT} &quot;{HOSTNAME}&quot;]" value_type="1">
           <description>Hadoop TaskTracker JMX Metrics 取得ログ</description>
           <ipmi_sensor></ipmi_sensor>
           <delay>30</delay>

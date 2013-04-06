@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<zabbix_export version="1.0" date="13.04.06" time="23.03">
+<zabbix_export version="1.0" date="13.04.06" time="23.22">
   <hosts>
-    <host name="Hadoop_TaskTracker_JMX">
+    <host name="Hadoop_write_JMX">
       <proxy_hostid>0</proxy_hostid>
       <useip>1</useip>
       <dns></dns>
@@ -17,206 +17,8 @@
       <ipmi_password></ipmi_password>
       <groups>
         <group>Templates</group>
-      </groups><items>        <item type="2" key="TaskTracker.Memory.HeapMemoryUsage.committed" value_type="3">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>TaskTracker.Memory.HeapMemoryUsage.committed</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop TaskTracker Memory</application>
-          </applications>
-        </item>
-        <item type="2" key="TaskTracker.Memory.HeapMemoryUsage.used" value_type="3">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>TaskTracker.Memory.HeapMemoryUsage.used</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop TaskTracker Memory</application>
-          </applications>
-        </item>
-        <item type="2" key="TaskTracker.Memory.HeapMemoryUsage.max" value_type="3">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>TaskTracker.Memory.HeapMemoryUsage.max</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop TaskTracker Memory</application>
-          </applications>
-        </item>
-        <item type="2" key="TaskTracker.Memory.HeapMemoryUsage.init" value_type="3">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>TaskTracker.Memory.HeapMemoryUsage.init</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop TaskTracker Memory</application>
-          </applications>
-        </item>
-        <item type="2" key="TaskTracker.Memory.NonHeapMemoryUsage.committed" value_type="3">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>TaskTracker.Memory.NonHeapMemoryUsage.committed</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop TaskTracker Memory</application>
-          </applications>
-        </item>
-        <item type="2" key="TaskTracker.Memory.NonHeapMemoryUsage.used" value_type="3">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>TaskTracker.Memory.NonHeapMemoryUsage.used</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop TaskTracker Memory</application>
-          </applications>
-        </item>
-        <item type="2" key="TaskTracker.Memory.NonHeapMemoryUsage.max" value_type="3">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>TaskTracker.Memory.NonHeapMemoryUsage.max</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop TaskTracker Memory</application>
-          </applications>
-        </item>
-        <item type="2" key="TaskTracker.Memory.NonHeapMemoryUsage.init" value_type="3">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>TaskTracker.Memory.NonHeapMemoryUsage.init</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop TaskTracker Memory</application>
-          </applications>
-        </item>
-        <item type="2" key="TaskTracker.TaskTrackerInfo.RpcPort" value_type="3">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>TaskTracker.TaskTrackerInfo.RpcPort</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop TaskTracker TaskTrackerInfo</application>
-          </applications>
-        </item>
-        <item type="2" key="TaskTracker.TaskTrackerInfo.Hostname" value_type="1">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>TaskTracker.TaskTrackerInfo.Hostname</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop TaskTracker TaskTrackerInfo</application>
-          </applications>
-        </item>
-        <item type="2" key="TaskTracker.TaskTrackerInfo.Healthy" value_type="1">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>TaskTracker.TaskTrackerInfo.Healthy</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop TaskTracker TaskTrackerInfo</application>
-          </applications>
-        </item>
-        <item type="2" key="TaskTracker.TaskTrackerInfo.Version" value_type="1">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>TaskTracker.TaskTrackerInfo.Version</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop TaskTracker TaskTrackerInfo</application>
-          </applications>
-        </item>
-        <item type="2" key="TaskTracker.TaskTrackerInfo.ConfigVersion" value_type="1">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>TaskTracker.TaskTrackerInfo.ConfigVersion</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop TaskTracker TaskTrackerInfo</application>
-          </applications>
-        </item>
-        <item type="2" key="TaskTracker.TaskTrackerInfo.JobTrackerUrl" value_type="1">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>TaskTracker.TaskTrackerInfo.JobTrackerUrl</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop TaskTracker TaskTrackerInfo</application>
-          </applications>
-        </item>
-        <item type="2" key="TaskTracker.TaskTrackerInfo.TasksInfo.running" value_type="3">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>TaskTracker.TaskTrackerInfo.TasksInfo.running</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop TaskTracker TaskTrackerInfo</application>
-          </applications>
-        </item>
-        <item type="2" key="TaskTracker.TaskTrackerInfo.TasksInfo.commit_pending" value_type="3">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>TaskTracker.TaskTrackerInfo.TasksInfo.commit_pending</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop TaskTracker TaskTrackerInfo</application>
-          </applications>
-        </item>
-        <item type="2" key="TaskTracker.TaskTrackerInfo.TasksInfo.failed" value_type="3">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>TaskTracker.TaskTrackerInfo.TasksInfo.failed</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop TaskTracker TaskTrackerInfo</application>
-          </applications>
-        </item>
-        <item type="2" key="TaskTracker.TaskTrackerInfo.HttpPort" value_type="3">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>TaskTracker.TaskTrackerInfo.HttpPort</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop TaskTracker TaskTrackerInfo</application>
-          </applications>
-        </item>
-        <item type="10" key="get_hadoop_jmx.pl[{HOST.DNS} {$TASKTRACKERPORT} &quot;{HOSTNAME}&quot;]" value_type="1">
-          <description>Hadoop TaskTracker JMX Metrics 取得ログ</description>
+      </groups><items>        <item type="10" key="get_hadoop_jmx.pl[{HOST.CONN} {$WRITEPORT} &quot;{HOSTNAME}&quot;]" value_type="1">
+          <description>Hadoop write JMX Metrics 取得ログ</description>
           <ipmi_sensor></ipmi_sensor>
           <delay>30</delay>
           <history>90</history>
@@ -224,15 +26,14 @@
           <status>0</status>
           <data_type>0</data_type>
           <applications>
-            <application>Hadoop Monitor Script for TaskTracker</application>
+            <application>Hadoop Monitor Script for write</application>
           </applications>
         </item></items><graphs/><triggers/>
       <templates/>
       <macros>
         <macro>
-          <value>50060
-</value>
-          <name>{$TASKTRACKERPORT}</name>
+          <value>directory</value>
+          <name>{$WRITEPORT}</name>
         </macro>
       </macros>
     </host>

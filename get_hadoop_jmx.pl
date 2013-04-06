@@ -53,18 +53,6 @@ if ( $zabbix_server_version <= 1.8 ){
     $zabbix_hostname = defined($ARGV[2]) ? $ARGV[3] : $hostname;
 }
 
-# Open temporary merics data file.
-if (!-d $infile_tmp_dir) {
-    mkdir $infile_tmp_dir
-        or die "[ERROR] Couldn't make $infile_tmp_dir in /tmp !";
-} elsif (!-w $infile_tmp_dir){
-    print "[ERROR] Can't write in infile temporary directory $infile_tmp_dir !";
-    exit 0;
-}
-my $zabbix_sender_infile = "$infile_tmp_dir/$hostname-$port.jmx-infile.dat";
-open my $infile_fh, ">", "$zabbix_sender_infile"
-    or die "[ERROR] Couldn't open $zabbix_sender_infile in /tmp !";
-
 # Get raw JSON metrics data in mxbean object list format from the Hadoop daemon.
 my $json = JSON->new->allow_nonref;
 my $request_url = "http://$hostname:$port/jmx";
@@ -95,6 +83,19 @@ if ( $nosend == 1 ){
     print @values;
     exit 0
 }
+
+# Open temporary merics data file.
+if (!-d $infile_tmp_dir) {
+    mkdir $infile_tmp_dir
+        or die "[ERROR] Couldn't make $infile_tmp_dir in /tmp !";
+} elsif (!-w $infile_tmp_dir){
+    print "[ERROR] Can't write in infile temporary directory $infile_tmp_dir !";
+    exit 0;
+}
+
+my $zabbix_sender_infile = "$infile_tmp_dir/$hostname-$port.jmx-infile.dat";
+open my $infile_fh, ">", "$zabbix_sender_infile"
+    or die "[ERROR] Couldn't open $zabbix_sender_infile in /tmp !";
 
 print {$infile_fh} @values;
 close $infile_fh;

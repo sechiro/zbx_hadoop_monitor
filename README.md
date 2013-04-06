@@ -32,9 +32,13 @@ Zabbixサーバの外部スクリプトディレクトリが "/etc/zabbix/extern
  $ git clone zbx_hadoop_monitor
  $ cd zbx_hadoop_monitor
  $ sudo cp get_hadoop_jmx.pl /etc/zabbix/externalscripts/
+ $ sudo chmod 755 /etc/zabbix/externalscripts/get_hadoop_jmx.pl
 ```
 
 上記以外をZabbixサーバの外部スクリプトディレクトリとしている場合は、手動でファイルを配置してください。
+
+/tmp/Zbx
+
 
 Zabbix 2.0 で利用する場合は、スクリプトの以下の箇所を書き換えてください。Zabbix 2.0 では、外部スクリプトに渡す引数の仕様が変更になっているため、このバージョン指定が必要になっています。
 

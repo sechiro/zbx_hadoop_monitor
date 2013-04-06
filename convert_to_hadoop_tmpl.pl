@@ -109,7 +109,7 @@ my $tmpl_header = '<?xml version="1.0" encoding="UTF-8"?>
       </groups>';
 
 # 監視スクリプトを実行し、実行ログを記録するアイテム
-my $script_item = '        <item type="10" key="get_hadoop_jmx.pl[{HOST.DNS} {$' . $PROCESSNAME . 'PORT} &quot;{HOSTNAME}&quot;]" value_type="1">
+my $script_item = '        <item type="10" key="get_hadoop_jmx.pl[{HOST.CONN} {$' . $PROCESSNAME . 'PORT} &quot;{HOSTNAME}&quot;]" value_type="1">
           <description>' . $kind . ' ' . $processName . ' JMX Metrics 取得ログ</description>
           <ipmi_sensor></ipmi_sensor>
           <delay>' . $delay . '</delay>
@@ -179,7 +179,7 @@ my $common_triggers = '        <trigger>
         <trigger>
           <description>' . $kind . ' ' . $processName . ' Metrics 取得失敗</description>
           <type>1</type>
-          <expression>(({' . $kind . '_' . $processName . '_JMX:get_hadoop_jmx.pl[{HOST.DNS} {$' .  $PROCESSNAME . 'PORT} "{HOSTNAME}"].regexp(ERROR)})#0)</expression>
+          <expression>(({' . $kind . '_' . $processName . '_JMX:get_hadoop_jmx.pl[{HOST.CONN} {$' .  $PROCESSNAME . 'PORT} "{HOSTNAME}"].regexp(ERROR)})#0)</expression>
           <url></url>
           <status>0</status>
           <priority>4</priority>
