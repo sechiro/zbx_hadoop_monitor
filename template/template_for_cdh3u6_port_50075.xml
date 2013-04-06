@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<zabbix_export version="1.0" date="13.04.06" time="23.25">
+<zabbix_export version="1.0" date="13.04.06" time="23.27">
   <hosts>
     <host name="Hadoop_DataNode_JMX">
       <proxy_hostid>0</proxy_hostid>
@@ -17,7 +17,84 @@
       <ipmi_password></ipmi_password>
       <groups>
         <group>Templates</group>
-      </groups><items>        <item type="2" key="DataNode.Memory.HeapMemoryUsage.committed" value_type="3">
+      </groups><items>        <item type="2" key="DataNode.DataNodeInfo.XceiverCount" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>DataNode.DataNodeInfo.XceiverCount</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop DataNode DataNodeInfo</application>
+          </applications>
+        </item>
+        <item type="2" key="DataNode.DataNodeInfo.RpcPort" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>DataNode.DataNodeInfo.RpcPort</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop DataNode DataNodeInfo</application>
+          </applications>
+        </item>
+        <item type="2" key="DataNode.DataNodeInfo.HostName" value_type="1">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>DataNode.DataNodeInfo.HostName</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop DataNode DataNodeInfo</application>
+          </applications>
+        </item>
+        <item type="2" key="DataNode.DataNodeInfo.VolumeInfo" value_type="1">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>DataNode.DataNodeInfo.VolumeInfo</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop DataNode DataNodeInfo</application>
+          </applications>
+        </item>
+        <item type="2" key="DataNode.DataNodeInfo.Version" value_type="1">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>DataNode.DataNodeInfo.Version</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop DataNode DataNodeInfo</application>
+          </applications>
+        </item>
+        <item type="2" key="DataNode.DataNodeInfo.HttpPort" value_type="1">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>DataNode.DataNodeInfo.HttpPort</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop DataNode DataNodeInfo</application>
+          </applications>
+        </item>
+        <item type="2" key="DataNode.DataNodeInfo.NamenodeAddress" value_type="1">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>DataNode.DataNodeInfo.NamenodeAddress</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop DataNode DataNodeInfo</application>
+          </applications>
+        </item>
+        <item type="2" key="DataNode.Memory.HeapMemoryUsage.committed" value_type="3">
           <units></units>
           <multiplier>0</multiplier>
           <description>DataNode.Memory.HeapMemoryUsage.committed</description>
@@ -105,10 +182,186 @@
             <application>Hadoop DataNode Memory</application>
           </applications>
         </item>
-        <item type="2" key="DataNode.DataNodeActivity.ReadsFromRemoteClient" value_type="3">
+        <item type="2" key="DataNode.RpcActivity.SentBytes" value_type="3">
           <units></units>
           <multiplier>0</multiplier>
-          <description>DataNode.DataNodeActivity.ReadsFromRemoteClient</description>
+          <description>DataNode.RpcActivity.SentBytes</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop DataNode RpcActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="DataNode.RpcActivity.RpcProcessingTimeAvgTime" value_type="0">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>DataNode.RpcActivity.RpcProcessingTimeAvgTime</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop DataNode RpcActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="DataNode.RpcActivity.RpcQueueTimeMinTime" value_type="0">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>DataNode.RpcActivity.RpcQueueTimeMinTime</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop DataNode RpcActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="DataNode.RpcActivity.RpcProcessingTimeMinTime" value_type="0">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>DataNode.RpcActivity.RpcProcessingTimeMinTime</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop DataNode RpcActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="DataNode.RpcActivity.callQueueLen" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>DataNode.RpcActivity.callQueueLen</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop DataNode RpcActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="DataNode.RpcActivity.rpcAuthorizationSuccesses" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>DataNode.RpcActivity.rpcAuthorizationSuccesses</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop DataNode RpcActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="DataNode.RpcActivity.rpcAuthorizationFailures" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>DataNode.RpcActivity.rpcAuthorizationFailures</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop DataNode RpcActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="DataNode.RpcActivity.ReceivedBytes" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>DataNode.RpcActivity.ReceivedBytes</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop DataNode RpcActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="DataNode.RpcActivity.RpcQueueTimeMaxTime" value_type="0">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>DataNode.RpcActivity.RpcQueueTimeMaxTime</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop DataNode RpcActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="DataNode.RpcActivity.RpcQueueTimeAvgTime" value_type="0">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>DataNode.RpcActivity.RpcQueueTimeAvgTime</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop DataNode RpcActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="DataNode.RpcActivity.RpcQueueTimeNumOps" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>DataNode.RpcActivity.RpcQueueTimeNumOps</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop DataNode RpcActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="DataNode.RpcActivity.RpcProcessingTimeMaxTime" value_type="0">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>DataNode.RpcActivity.RpcProcessingTimeMaxTime</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop DataNode RpcActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="DataNode.RpcActivity.rpcAuthenticationSuccesses" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>DataNode.RpcActivity.rpcAuthenticationSuccesses</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop DataNode RpcActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="DataNode.RpcActivity.rpcAuthenticationFailures" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>DataNode.RpcActivity.rpcAuthenticationFailures</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop DataNode RpcActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="DataNode.RpcActivity.RpcProcessingTimeNumOps" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>DataNode.RpcActivity.RpcProcessingTimeNumOps</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop DataNode RpcActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="DataNode.RpcActivity.NumOpenConnections" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>DataNode.RpcActivity.NumOpenConnections</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop DataNode RpcActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="DataNode.DataNodeActivity.blockReportsAvgTime" value_type="0">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>DataNode.DataNodeActivity.blockReportsAvgTime</description>
           <delay>30</delay>
           <history>90</history>
           <trends>365</trends>
@@ -116,10 +369,10 @@
             <application>Hadoop DataNode DataNodeActivity</application>
           </applications>
         </item>
-        <item type="2" key="DataNode.DataNodeActivity.SendDataPacketTransferNanosAvgTime" value_type="0">
+        <item type="2" key="DataNode.DataNodeActivity.blockReportsNumOps" value_type="3">
           <units></units>
           <multiplier>0</multiplier>
-          <description>DataNode.DataNodeActivity.SendDataPacketTransferNanosAvgTime</description>
+          <description>DataNode.DataNodeActivity.blockReportsNumOps</description>
           <delay>30</delay>
           <history>90</history>
           <trends>365</trends>
@@ -127,10 +380,10 @@
             <application>Hadoop DataNode DataNodeActivity</application>
           </applications>
         </item>
-        <item type="2" key="DataNode.DataNodeActivity.ReplaceBlockOpNumOps" value_type="3">
+        <item type="2" key="DataNode.DataNodeActivity.replaceBlockOpMaxTime" value_type="0">
           <units></units>
           <multiplier>0</multiplier>
-          <description>DataNode.DataNodeActivity.ReplaceBlockOpNumOps</description>
+          <description>DataNode.DataNodeActivity.replaceBlockOpMaxTime</description>
           <delay>30</delay>
           <history>90</history>
           <trends>365</trends>
@@ -138,10 +391,10 @@
             <application>Hadoop DataNode DataNodeActivity</application>
           </applications>
         </item>
-        <item type="2" key="DataNode.DataNodeActivity.FlushNanosNumOps" value_type="3">
+        <item type="2" key="DataNode.DataNodeActivity.blockChecksumOpMaxTime" value_type="0">
           <units></units>
           <multiplier>0</multiplier>
-          <description>DataNode.DataNodeActivity.FlushNanosNumOps</description>
+          <description>DataNode.DataNodeActivity.blockChecksumOpMaxTime</description>
           <delay>30</delay>
           <history>90</history>
           <trends>365</trends>
@@ -149,10 +402,10 @@
             <application>Hadoop DataNode DataNodeActivity</application>
           </applications>
         </item>
-        <item type="2" key="DataNode.DataNodeActivity.SendDataPacketBlockedOnNetworkNanosNumOps" value_type="3">
+        <item type="2" key="DataNode.DataNodeActivity.replaceBlockOpMinTime" value_type="0">
           <units></units>
           <multiplier>0</multiplier>
-          <description>DataNode.DataNodeActivity.SendDataPacketBlockedOnNetworkNanosNumOps</description>
+          <description>DataNode.DataNodeActivity.replaceBlockOpMinTime</description>
           <delay>30</delay>
           <history>90</history>
           <trends>365</trends>
@@ -160,10 +413,10 @@
             <application>Hadoop DataNode DataNodeActivity</application>
           </applications>
         </item>
-        <item type="2" key="DataNode.DataNodeActivity.ReadsFromLocalClient" value_type="3">
+        <item type="2" key="DataNode.DataNodeActivity.bytes_written" value_type="3">
           <units></units>
           <multiplier>0</multiplier>
-          <description>DataNode.DataNodeActivity.ReadsFromLocalClient</description>
+          <description>DataNode.DataNodeActivity.bytes_written</description>
           <delay>30</delay>
           <history>90</history>
           <trends>365</trends>
@@ -171,10 +424,10 @@
             <application>Hadoop DataNode DataNodeActivity</application>
           </applications>
         </item>
-        <item type="2" key="DataNode.DataNodeActivity.SendDataPacketBlockedOnNetworkNanosAvgTime" value_type="0">
+        <item type="2" key="DataNode.DataNodeActivity.blockChecksumOpMinTime" value_type="0">
           <units></units>
           <multiplier>0</multiplier>
-          <description>DataNode.DataNodeActivity.SendDataPacketBlockedOnNetworkNanosAvgTime</description>
+          <description>DataNode.DataNodeActivity.blockChecksumOpMinTime</description>
           <delay>30</delay>
           <history>90</history>
           <trends>365</trends>
@@ -182,10 +435,10 @@
             <application>Hadoop DataNode DataNodeActivity</application>
           </applications>
         </item>
-        <item type="2" key="DataNode.DataNodeActivity.HeartbeatsAvgTime" value_type="0">
+        <item type="2" key="DataNode.DataNodeActivity.heartBeatsMinTime" value_type="0">
           <units></units>
           <multiplier>0</multiplier>
-          <description>DataNode.DataNodeActivity.HeartbeatsAvgTime</description>
+          <description>DataNode.DataNodeActivity.heartBeatsMinTime</description>
           <delay>30</delay>
           <history>90</history>
           <trends>365</trends>
@@ -193,10 +446,10 @@
             <application>Hadoop DataNode DataNodeActivity</application>
           </applications>
         </item>
-        <item type="2" key="DataNode.DataNodeActivity.BlocksRead" value_type="3">
+        <item type="2" key="DataNode.DataNodeActivity.readBlockOpMaxTime" value_type="0">
           <units></units>
           <multiplier>0</multiplier>
-          <description>DataNode.DataNodeActivity.BlocksRead</description>
+          <description>DataNode.DataNodeActivity.readBlockOpMaxTime</description>
           <delay>30</delay>
           <history>90</history>
           <trends>365</trends>
@@ -204,10 +457,10 @@
             <application>Hadoop DataNode DataNodeActivity</application>
           </applications>
         </item>
-        <item type="2" key="DataNode.DataNodeActivity.FsyncNanosAvgTime" value_type="0">
+        <item type="2" key="DataNode.DataNodeActivity.copyBlockOpMaxTime" value_type="0">
           <units></units>
           <multiplier>0</multiplier>
-          <description>DataNode.DataNodeActivity.FsyncNanosAvgTime</description>
+          <description>DataNode.DataNodeActivity.copyBlockOpMaxTime</description>
           <delay>30</delay>
           <history>90</history>
           <trends>365</trends>
@@ -215,10 +468,10 @@
             <application>Hadoop DataNode DataNodeActivity</application>
           </applications>
         </item>
-        <item type="2" key="DataNode.DataNodeActivity.BlockReportsAvgTime" value_type="0">
+        <item type="2" key="DataNode.DataNodeActivity.readBlockOpAvgTime" value_type="0">
           <units></units>
           <multiplier>0</multiplier>
-          <description>DataNode.DataNodeActivity.BlockReportsAvgTime</description>
+          <description>DataNode.DataNodeActivity.readBlockOpAvgTime</description>
           <delay>30</delay>
           <history>90</history>
           <trends>365</trends>
@@ -226,10 +479,10 @@
             <application>Hadoop DataNode DataNodeActivity</application>
           </applications>
         </item>
-        <item type="2" key="DataNode.DataNodeActivity.BlockReportsNumOps" value_type="3">
+        <item type="2" key="DataNode.DataNodeActivity.blockReportsMaxTime" value_type="0">
           <units></units>
           <multiplier>0</multiplier>
-          <description>DataNode.DataNodeActivity.BlockReportsNumOps</description>
+          <description>DataNode.DataNodeActivity.blockReportsMaxTime</description>
           <delay>30</delay>
           <history>90</history>
           <trends>365</trends>
@@ -237,10 +490,10 @@
             <application>Hadoop DataNode DataNodeActivity</application>
           </applications>
         </item>
-        <item type="2" key="DataNode.DataNodeActivity.VolumeFailures" value_type="3">
+        <item type="2" key="DataNode.DataNodeActivity.readBlockOpNumOps" value_type="3">
           <units></units>
           <multiplier>0</multiplier>
-          <description>DataNode.DataNodeActivity.VolumeFailures</description>
+          <description>DataNode.DataNodeActivity.readBlockOpNumOps</description>
           <delay>30</delay>
           <history>90</history>
           <trends>365</trends>
@@ -248,10 +501,10 @@
             <application>Hadoop DataNode DataNodeActivity</application>
           </applications>
         </item>
-        <item type="2" key="DataNode.DataNodeActivity.CopyBlockOpNumOps" value_type="3">
+        <item type="2" key="DataNode.DataNodeActivity.blocks_replicated" value_type="3">
           <units></units>
           <multiplier>0</multiplier>
-          <description>DataNode.DataNodeActivity.CopyBlockOpNumOps</description>
+          <description>DataNode.DataNodeActivity.blocks_replicated</description>
           <delay>30</delay>
           <history>90</history>
           <trends>365</trends>
@@ -259,10 +512,10 @@
             <application>Hadoop DataNode DataNodeActivity</application>
           </applications>
         </item>
-        <item type="2" key="DataNode.DataNodeActivity.BlockVerificationFailures" value_type="3">
+        <item type="2" key="DataNode.DataNodeActivity.readBlockOpMinTime" value_type="0">
           <units></units>
           <multiplier>0</multiplier>
-          <description>DataNode.DataNodeActivity.BlockVerificationFailures</description>
+          <description>DataNode.DataNodeActivity.readBlockOpMinTime</description>
           <delay>30</delay>
           <history>90</history>
           <trends>365</trends>
@@ -270,10 +523,10 @@
             <application>Hadoop DataNode DataNodeActivity</application>
           </applications>
         </item>
-        <item type="2" key="DataNode.DataNodeActivity.FsyncNanosNumOps" value_type="3">
+        <item type="2" key="DataNode.DataNodeActivity.blocks_verified" value_type="3">
           <units></units>
           <multiplier>0</multiplier>
-          <description>DataNode.DataNodeActivity.FsyncNanosNumOps</description>
+          <description>DataNode.DataNodeActivity.blocks_verified</description>
           <delay>30</delay>
           <history>90</history>
           <trends>365</trends>
@@ -281,10 +534,10 @@
             <application>Hadoop DataNode DataNodeActivity</application>
           </applications>
         </item>
-        <item type="2" key="DataNode.DataNodeActivity.WriteBlockOpAvgTime" value_type="0">
+        <item type="2" key="DataNode.DataNodeActivity.reads_from_remote_client" value_type="3">
           <units></units>
           <multiplier>0</multiplier>
-          <description>DataNode.DataNodeActivity.WriteBlockOpAvgTime</description>
+          <description>DataNode.DataNodeActivity.reads_from_remote_client</description>
           <delay>30</delay>
           <history>90</history>
           <trends>365</trends>
@@ -292,10 +545,10 @@
             <application>Hadoop DataNode DataNodeActivity</application>
           </applications>
         </item>
-        <item type="2" key="DataNode.DataNodeActivity.BlocksGetLocalPathInfo" value_type="3">
+        <item type="2" key="DataNode.DataNodeActivity.heartBeatsNumOps" value_type="3">
           <units></units>
           <multiplier>0</multiplier>
-          <description>DataNode.DataNodeActivity.BlocksGetLocalPathInfo</description>
+          <description>DataNode.DataNodeActivity.heartBeatsNumOps</description>
           <delay>30</delay>
           <history>90</history>
           <trends>365</trends>
@@ -303,10 +556,10 @@
             <application>Hadoop DataNode DataNodeActivity</application>
           </applications>
         </item>
-        <item type="2" key="DataNode.DataNodeActivity.ReplaceBlockOpAvgTime" value_type="0">
+        <item type="2" key="DataNode.DataNodeActivity.heartBeatsAvgTime" value_type="0">
           <units></units>
           <multiplier>0</multiplier>
-          <description>DataNode.DataNodeActivity.ReplaceBlockOpAvgTime</description>
+          <description>DataNode.DataNodeActivity.heartBeatsAvgTime</description>
           <delay>30</delay>
           <history>90</history>
           <trends>365</trends>
@@ -314,10 +567,10 @@
             <application>Hadoop DataNode DataNodeActivity</application>
           </applications>
         </item>
-        <item type="2" key="DataNode.DataNodeActivity.WriteBlockOpNumOps" value_type="3">
+        <item type="2" key="DataNode.DataNodeActivity.writeBlockOpNumOps" value_type="3">
           <units></units>
           <multiplier>0</multiplier>
-          <description>DataNode.DataNodeActivity.WriteBlockOpNumOps</description>
+          <description>DataNode.DataNodeActivity.writeBlockOpNumOps</description>
           <delay>30</delay>
           <history>90</history>
           <trends>365</trends>
@@ -325,10 +578,10 @@
             <application>Hadoop DataNode DataNodeActivity</application>
           </applications>
         </item>
-        <item type="2" key="DataNode.DataNodeActivity.BlockChecksumOpNumOps" value_type="3">
+        <item type="2" key="DataNode.DataNodeActivity.blocks_removed" value_type="3">
           <units></units>
           <multiplier>0</multiplier>
-          <description>DataNode.DataNodeActivity.BlockChecksumOpNumOps</description>
+          <description>DataNode.DataNodeActivity.blocks_removed</description>
           <delay>30</delay>
           <history>90</history>
           <trends>365</trends>
@@ -336,10 +589,10 @@
             <application>Hadoop DataNode DataNodeActivity</application>
           </applications>
         </item>
-        <item type="2" key="DataNode.DataNodeActivity.FsyncCount" value_type="3">
+        <item type="2" key="DataNode.DataNodeActivity.writeBlockOpAvgTime" value_type="0">
           <units></units>
           <multiplier>0</multiplier>
-          <description>DataNode.DataNodeActivity.FsyncCount</description>
+          <description>DataNode.DataNodeActivity.writeBlockOpAvgTime</description>
           <delay>30</delay>
           <history>90</history>
           <trends>365</trends>
@@ -347,10 +600,10 @@
             <application>Hadoop DataNode DataNodeActivity</application>
           </applications>
         </item>
-        <item type="2" key="DataNode.DataNodeActivity.BlocksVerified" value_type="3">
+        <item type="2" key="DataNode.DataNodeActivity.writeBlockOpMaxTime" value_type="0">
           <units></units>
           <multiplier>0</multiplier>
-          <description>DataNode.DataNodeActivity.BlocksVerified</description>
+          <description>DataNode.DataNodeActivity.writeBlockOpMaxTime</description>
           <delay>30</delay>
           <history>90</history>
           <trends>365</trends>
@@ -358,10 +611,10 @@
             <application>Hadoop DataNode DataNodeActivity</application>
           </applications>
         </item>
-        <item type="2" key="DataNode.DataNodeActivity.HeartbeatsNumOps" value_type="3">
+        <item type="2" key="DataNode.DataNodeActivity.heartBeatsMaxTime" value_type="0">
           <units></units>
           <multiplier>0</multiplier>
-          <description>DataNode.DataNodeActivity.HeartbeatsNumOps</description>
+          <description>DataNode.DataNodeActivity.heartBeatsMaxTime</description>
           <delay>30</delay>
           <history>90</history>
           <trends>365</trends>
@@ -369,10 +622,10 @@
             <application>Hadoop DataNode DataNodeActivity</application>
           </applications>
         </item>
-        <item type="2" key="DataNode.DataNodeActivity.CopyBlockOpAvgTime" value_type="0">
+        <item type="2" key="DataNode.DataNodeActivity.copyBlockOpNumOps" value_type="3">
           <units></units>
           <multiplier>0</multiplier>
-          <description>DataNode.DataNodeActivity.CopyBlockOpAvgTime</description>
+          <description>DataNode.DataNodeActivity.copyBlockOpNumOps</description>
           <delay>30</delay>
           <history>90</history>
           <trends>365</trends>
@@ -380,10 +633,10 @@
             <application>Hadoop DataNode DataNodeActivity</application>
           </applications>
         </item>
-        <item type="2" key="DataNode.DataNodeActivity.BlocksWritten" value_type="3">
+        <item type="2" key="DataNode.DataNodeActivity.copyBlockOpMinTime" value_type="0">
           <units></units>
           <multiplier>0</multiplier>
-          <description>DataNode.DataNodeActivity.BlocksWritten</description>
+          <description>DataNode.DataNodeActivity.copyBlockOpMinTime</description>
           <delay>30</delay>
           <history>90</history>
           <trends>365</trends>
@@ -391,10 +644,10 @@
             <application>Hadoop DataNode DataNodeActivity</application>
           </applications>
         </item>
-        <item type="2" key="DataNode.DataNodeActivity.ReadBlockOpAvgTime" value_type="0">
+        <item type="2" key="DataNode.DataNodeActivity.replaceBlockOpAvgTime" value_type="0">
           <units></units>
           <multiplier>0</multiplier>
-          <description>DataNode.DataNodeActivity.ReadBlockOpAvgTime</description>
+          <description>DataNode.DataNodeActivity.replaceBlockOpAvgTime</description>
           <delay>30</delay>
           <history>90</history>
           <trends>365</trends>
@@ -402,10 +655,10 @@
             <application>Hadoop DataNode DataNodeActivity</application>
           </applications>
         </item>
-        <item type="2" key="DataNode.DataNodeActivity.BlocksRemoved" value_type="3">
+        <item type="2" key="DataNode.DataNodeActivity.blockChecksumOpNumOps" value_type="3">
           <units></units>
           <multiplier>0</multiplier>
-          <description>DataNode.DataNodeActivity.BlocksRemoved</description>
+          <description>DataNode.DataNodeActivity.blockChecksumOpNumOps</description>
           <delay>30</delay>
           <history>90</history>
           <trends>365</trends>
@@ -413,10 +666,10 @@
             <application>Hadoop DataNode DataNodeActivity</application>
           </applications>
         </item>
-        <item type="2" key="DataNode.DataNodeActivity.WritesFromLocalClient" value_type="3">
+        <item type="2" key="DataNode.DataNodeActivity.blockChecksumOpAvgTime" value_type="0">
           <units></units>
           <multiplier>0</multiplier>
-          <description>DataNode.DataNodeActivity.WritesFromLocalClient</description>
+          <description>DataNode.DataNodeActivity.blockChecksumOpAvgTime</description>
           <delay>30</delay>
           <history>90</history>
           <trends>365</trends>
@@ -424,10 +677,10 @@
             <application>Hadoop DataNode DataNodeActivity</application>
           </applications>
         </item>
-        <item type="2" key="DataNode.DataNodeActivity.BytesRead" value_type="3">
+        <item type="2" key="DataNode.DataNodeActivity.writes_from_local_client" value_type="3">
           <units></units>
           <multiplier>0</multiplier>
-          <description>DataNode.DataNodeActivity.BytesRead</description>
+          <description>DataNode.DataNodeActivity.writes_from_local_client</description>
           <delay>30</delay>
           <history>90</history>
           <trends>365</trends>
@@ -435,10 +688,10 @@
             <application>Hadoop DataNode DataNodeActivity</application>
           </applications>
         </item>
-        <item type="2" key="DataNode.DataNodeActivity.BlockChecksumOpAvgTime" value_type="0">
+        <item type="2" key="DataNode.DataNodeActivity.block_verification_failures" value_type="3">
           <units></units>
           <multiplier>0</multiplier>
-          <description>DataNode.DataNodeActivity.BlockChecksumOpAvgTime</description>
+          <description>DataNode.DataNodeActivity.block_verification_failures</description>
           <delay>30</delay>
           <history>90</history>
           <trends>365</trends>
@@ -446,10 +699,10 @@
             <application>Hadoop DataNode DataNodeActivity</application>
           </applications>
         </item>
-        <item type="2" key="DataNode.DataNodeActivity.BytesWritten" value_type="3">
+        <item type="2" key="DataNode.DataNodeActivity.replaceBlockOpNumOps" value_type="3">
           <units></units>
           <multiplier>0</multiplier>
-          <description>DataNode.DataNodeActivity.BytesWritten</description>
+          <description>DataNode.DataNodeActivity.replaceBlockOpNumOps</description>
           <delay>30</delay>
           <history>90</history>
           <trends>365</trends>
@@ -457,10 +710,10 @@
             <application>Hadoop DataNode DataNodeActivity</application>
           </applications>
         </item>
-        <item type="2" key="DataNode.DataNodeActivity.FlushNanosAvgTime" value_type="0">
+        <item type="2" key="DataNode.DataNodeActivity.writeBlockOpMinTime" value_type="0">
           <units></units>
           <multiplier>0</multiplier>
-          <description>DataNode.DataNodeActivity.FlushNanosAvgTime</description>
+          <description>DataNode.DataNodeActivity.writeBlockOpMinTime</description>
           <delay>30</delay>
           <history>90</history>
           <trends>365</trends>
@@ -468,10 +721,10 @@
             <application>Hadoop DataNode DataNodeActivity</application>
           </applications>
         </item>
-        <item type="2" key="DataNode.DataNodeActivity.PacketAckRoundTripTimeNanosAvgTime" value_type="0">
+        <item type="2" key="DataNode.DataNodeActivity.bytes_read" value_type="3">
           <units></units>
           <multiplier>0</multiplier>
-          <description>DataNode.DataNodeActivity.PacketAckRoundTripTimeNanosAvgTime</description>
+          <description>DataNode.DataNodeActivity.bytes_read</description>
           <delay>30</delay>
           <history>90</history>
           <trends>365</trends>
@@ -479,10 +732,10 @@
             <application>Hadoop DataNode DataNodeActivity</application>
           </applications>
         </item>
-        <item type="2" key="DataNode.DataNodeActivity.ReadBlockOpNumOps" value_type="3">
+        <item type="2" key="DataNode.DataNodeActivity.blockReportsMinTime" value_type="0">
           <units></units>
           <multiplier>0</multiplier>
-          <description>DataNode.DataNodeActivity.ReadBlockOpNumOps</description>
+          <description>DataNode.DataNodeActivity.blockReportsMinTime</description>
           <delay>30</delay>
           <history>90</history>
           <trends>365</trends>
@@ -490,10 +743,10 @@
             <application>Hadoop DataNode DataNodeActivity</application>
           </applications>
         </item>
-        <item type="2" key="DataNode.DataNodeActivity.BlocksReplicated" value_type="3">
+        <item type="2" key="DataNode.DataNodeActivity.volumeFailures" value_type="3">
           <units></units>
           <multiplier>0</multiplier>
-          <description>DataNode.DataNodeActivity.BlocksReplicated</description>
+          <description>DataNode.DataNodeActivity.volumeFailures</description>
           <delay>30</delay>
           <history>90</history>
           <trends>365</trends>
@@ -501,10 +754,10 @@
             <application>Hadoop DataNode DataNodeActivity</application>
           </applications>
         </item>
-        <item type="2" key="DataNode.DataNodeActivity.WritesFromRemoteClient" value_type="3">
+        <item type="2" key="DataNode.DataNodeActivity.blocks_read" value_type="3">
           <units></units>
           <multiplier>0</multiplier>
-          <description>DataNode.DataNodeActivity.WritesFromRemoteClient</description>
+          <description>DataNode.DataNodeActivity.blocks_read</description>
           <delay>30</delay>
           <history>90</history>
           <trends>365</trends>
@@ -512,10 +765,10 @@
             <application>Hadoop DataNode DataNodeActivity</application>
           </applications>
         </item>
-        <item type="2" key="DataNode.DataNodeActivity.SendDataPacketTransferNanosNumOps" value_type="3">
+        <item type="2" key="DataNode.DataNodeActivity.blocks_written" value_type="3">
           <units></units>
           <multiplier>0</multiplier>
-          <description>DataNode.DataNodeActivity.SendDataPacketTransferNanosNumOps</description>
+          <description>DataNode.DataNodeActivity.blocks_written</description>
           <delay>30</delay>
           <history>90</history>
           <trends>365</trends>
@@ -523,10 +776,32 @@
             <application>Hadoop DataNode DataNodeActivity</application>
           </applications>
         </item>
-        <item type="2" key="DataNode.DataNodeActivity.PacketAckRoundTripTimeNanosNumOps" value_type="3">
+        <item type="2" key="DataNode.DataNodeActivity.copyBlockOpAvgTime" value_type="0">
           <units></units>
           <multiplier>0</multiplier>
-          <description>DataNode.DataNodeActivity.PacketAckRoundTripTimeNanosNumOps</description>
+          <description>DataNode.DataNodeActivity.copyBlockOpAvgTime</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop DataNode DataNodeActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="DataNode.DataNodeActivity.reads_from_local_client" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>DataNode.DataNodeActivity.reads_from_local_client</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop DataNode DataNodeActivity</application>
+          </applications>
+        </item>
+        <item type="2" key="DataNode.DataNodeActivity.writes_from_remote_client" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>DataNode.DataNodeActivity.writes_from_remote_client</description>
           <delay>30</delay>
           <history>90</history>
           <trends>365</trends>
@@ -587,586 +862,6 @@
           <trends>365</trends>
           <applications>
             <application>Hadoop DataNode FSDatasetState</application>
-          </applications>
-        </item>
-        <item type="2" key="DataNode.RpcActivity.SentBytes" value_type="3">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>DataNode.RpcActivity.SentBytes</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop DataNode RpcActivity</application>
-          </applications>
-        </item>
-        <item type="2" key="DataNode.RpcActivity.RpcProcessingTimeAvgTime" value_type="0">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>DataNode.RpcActivity.RpcProcessingTimeAvgTime</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop DataNode RpcActivity</application>
-          </applications>
-        </item>
-        <item type="2" key="DataNode.RpcActivity.RpcAuthenticationSuccesses" value_type="3">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>DataNode.RpcActivity.RpcAuthenticationSuccesses</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop DataNode RpcActivity</application>
-          </applications>
-        </item>
-        <item type="2" key="DataNode.RpcActivity.RpcQueueTimeAvgTime" value_type="0">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>DataNode.RpcActivity.RpcQueueTimeAvgTime</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop DataNode RpcActivity</application>
-          </applications>
-        </item>
-        <item type="2" key="DataNode.RpcActivity.RpcAuthorizationFailures" value_type="3">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>DataNode.RpcActivity.RpcAuthorizationFailures</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop DataNode RpcActivity</application>
-          </applications>
-        </item>
-        <item type="2" key="DataNode.RpcActivity.RpcAuthenticationFailures" value_type="3">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>DataNode.RpcActivity.RpcAuthenticationFailures</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop DataNode RpcActivity</application>
-          </applications>
-        </item>
-        <item type="2" key="DataNode.RpcActivity.RpcQueueTimeNumOps" value_type="3">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>DataNode.RpcActivity.RpcQueueTimeNumOps</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop DataNode RpcActivity</application>
-          </applications>
-        </item>
-        <item type="2" key="DataNode.RpcActivity.RpcAuthorizationSuccesses" value_type="3">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>DataNode.RpcActivity.RpcAuthorizationSuccesses</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop DataNode RpcActivity</application>
-          </applications>
-        </item>
-        <item type="2" key="DataNode.RpcActivity.CallQueueLength" value_type="3">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>DataNode.RpcActivity.CallQueueLength</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop DataNode RpcActivity</application>
-          </applications>
-        </item>
-        <item type="2" key="DataNode.RpcActivity.RpcProcessingTimeNumOps" value_type="3">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>DataNode.RpcActivity.RpcProcessingTimeNumOps</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop DataNode RpcActivity</application>
-          </applications>
-        </item>
-        <item type="2" key="DataNode.RpcActivity.ReceivedBytes" value_type="3">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>DataNode.RpcActivity.ReceivedBytes</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop DataNode RpcActivity</application>
-          </applications>
-        </item>
-        <item type="2" key="DataNode.RpcActivity.NumOpenConnections" value_type="3">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>DataNode.RpcActivity.NumOpenConnections</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop DataNode RpcActivity</application>
-          </applications>
-        </item>
-        <item type="2" key="DataNode.MetricsSystem.NumAllSources" value_type="3">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>DataNode.MetricsSystem.NumAllSources</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop DataNode MetricsSystem</application>
-          </applications>
-        </item>
-        <item type="2" key="DataNode.MetricsSystem.NumActiveSinks" value_type="3">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>DataNode.MetricsSystem.NumActiveSinks</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop DataNode MetricsSystem</application>
-          </applications>
-        </item>
-        <item type="2" key="DataNode.MetricsSystem.NumAllSinks" value_type="3">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>DataNode.MetricsSystem.NumAllSinks</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop DataNode MetricsSystem</application>
-          </applications>
-        </item>
-        <item type="2" key="DataNode.MetricsSystem.NumActiveSources" value_type="3">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>DataNode.MetricsSystem.NumActiveSources</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop DataNode MetricsSystem</application>
-          </applications>
-        </item>
-        <item type="2" key="DataNode.MetricsSystem.SnapshotNumOps" value_type="3">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>DataNode.MetricsSystem.SnapshotNumOps</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop DataNode MetricsSystem</application>
-          </applications>
-        </item>
-        <item type="2" key="DataNode.MetricsSystem.DroppedPubAll" value_type="3">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>DataNode.MetricsSystem.DroppedPubAll</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop DataNode MetricsSystem</application>
-          </applications>
-        </item>
-        <item type="2" key="DataNode.MetricsSystem.PublishNumOps" value_type="3">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>DataNode.MetricsSystem.PublishNumOps</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop DataNode MetricsSystem</application>
-          </applications>
-        </item>
-        <item type="2" key="DataNode.MetricsSystem.SnapshotAvgTime" value_type="0">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>DataNode.MetricsSystem.SnapshotAvgTime</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop DataNode MetricsSystem</application>
-          </applications>
-        </item>
-        <item type="2" key="DataNode.MetricsSystem.PublishAvgTime" value_type="0">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>DataNode.MetricsSystem.PublishAvgTime</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop DataNode MetricsSystem</application>
-          </applications>
-        </item>
-        <item type="2" key="DataNode.UgiMetrics.LoginSuccessAvgTime" value_type="0">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>DataNode.UgiMetrics.LoginSuccessAvgTime</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop DataNode UgiMetrics</application>
-          </applications>
-        </item>
-        <item type="2" key="DataNode.UgiMetrics.LoginSuccessNumOps" value_type="3">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>DataNode.UgiMetrics.LoginSuccessNumOps</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop DataNode UgiMetrics</application>
-          </applications>
-        </item>
-        <item type="2" key="DataNode.UgiMetrics.LoginFailureNumOps" value_type="3">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>DataNode.UgiMetrics.LoginFailureNumOps</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop DataNode UgiMetrics</application>
-          </applications>
-        </item>
-        <item type="2" key="DataNode.UgiMetrics.LoginFailureAvgTime" value_type="0">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>DataNode.UgiMetrics.LoginFailureAvgTime</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop DataNode UgiMetrics</application>
-          </applications>
-        </item>
-        <item type="2" key="DataNode.DataNodeInfo.NamenodeAddresses" value_type="1">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>DataNode.DataNodeInfo.NamenodeAddresses</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop DataNode DataNodeInfo</application>
-          </applications>
-        </item>
-        <item type="2" key="DataNode.DataNodeInfo.XceiverCount" value_type="3">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>DataNode.DataNodeInfo.XceiverCount</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop DataNode DataNodeInfo</application>
-          </applications>
-        </item>
-        <item type="2" key="DataNode.DataNodeInfo.RpcPort" value_type="3">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>DataNode.DataNodeInfo.RpcPort</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop DataNode DataNodeInfo</application>
-          </applications>
-        </item>
-        <item type="2" key="DataNode.DataNodeInfo.Version" value_type="1">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>DataNode.DataNodeInfo.Version</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop DataNode DataNodeInfo</application>
-          </applications>
-        </item>
-        <item type="2" key="DataNode.DataNodeInfo.ClusterId" value_type="1">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>DataNode.DataNodeInfo.ClusterId</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop DataNode DataNodeInfo</application>
-          </applications>
-        </item>
-        <item type="2" key="DataNode.DataNodeInfo.HttpPort" value_type="1">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>DataNode.DataNodeInfo.HttpPort</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop DataNode DataNodeInfo</application>
-          </applications>
-        </item>
-        <item type="2" key="DataNode.DataNodeInfo.VolumeInfo" value_type="1">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>DataNode.DataNodeInfo.VolumeInfo</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop DataNode DataNodeInfo</application>
-          </applications>
-        </item>
-        <item type="2" key="DataNode.JvmMetrics.LogFatal" value_type="3">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>DataNode.JvmMetrics.LogFatal</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop DataNode JvmMetrics</application>
-          </applications>
-        </item>
-        <item type="2" key="DataNode.JvmMetrics.GcTimeMillis" value_type="3">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>DataNode.JvmMetrics.GcTimeMillis</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop DataNode JvmMetrics</application>
-          </applications>
-        </item>
-        <item type="2" key="DataNode.JvmMetrics.LogWarn" value_type="3">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>DataNode.JvmMetrics.LogWarn</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop DataNode JvmMetrics</application>
-          </applications>
-        </item>
-        <item type="2" key="DataNode.JvmMetrics.ThreadsBlocked" value_type="3">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>DataNode.JvmMetrics.ThreadsBlocked</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop DataNode JvmMetrics</application>
-          </applications>
-        </item>
-        <item type="2" key="DataNode.JvmMetrics.ThreadsTimedWaiting" value_type="3">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>DataNode.JvmMetrics.ThreadsTimedWaiting</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop DataNode JvmMetrics</application>
-          </applications>
-        </item>
-        <item type="2" key="DataNode.JvmMetrics.MemNonHeapUsedM" value_type="0">
-          <units>B</units>
-          <multiplier>1</multiplier>
-          <delta>0</delta>
-          <formula>1048576</formula>
-          <description>DataNode.JvmMetrics.MemNonHeapUsedM</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop DataNode JvmMetrics</application>
-          </applications>
-        </item>
-        <item type="2" key="DataNode.JvmMetrics.MemHeapCommittedM" value_type="0">
-          <units>B</units>
-          <multiplier>1</multiplier>
-          <delta>0</delta>
-          <formula>1048576</formula>
-          <description>DataNode.JvmMetrics.MemHeapCommittedM</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop DataNode JvmMetrics</application>
-          </applications>
-        </item>
-        <item type="2" key="DataNode.JvmMetrics.ThreadsRunnable" value_type="3">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>DataNode.JvmMetrics.ThreadsRunnable</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop DataNode JvmMetrics</application>
-          </applications>
-        </item>
-        <item type="2" key="DataNode.JvmMetrics.GcTimeMillisCopy" value_type="3">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>DataNode.JvmMetrics.GcTimeMillisCopy</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop DataNode JvmMetrics</application>
-          </applications>
-        </item>
-        <item type="2" key="DataNode.JvmMetrics.MemNonHeapCommittedM" value_type="0">
-          <units>B</units>
-          <multiplier>1</multiplier>
-          <delta>0</delta>
-          <formula>1048576</formula>
-          <description>DataNode.JvmMetrics.MemNonHeapCommittedM</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop DataNode JvmMetrics</application>
-          </applications>
-        </item>
-        <item type="2" key="DataNode.JvmMetrics.LogInfo" value_type="3">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>DataNode.JvmMetrics.LogInfo</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop DataNode JvmMetrics</application>
-          </applications>
-        </item>
-        <item type="2" key="DataNode.JvmMetrics.ThreadsNew" value_type="3">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>DataNode.JvmMetrics.ThreadsNew</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop DataNode JvmMetrics</application>
-          </applications>
-        </item>
-        <item type="2" key="DataNode.JvmMetrics.GcTimeMillisMarkSweepCompact" value_type="3">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>DataNode.JvmMetrics.GcTimeMillisMarkSweepCompact</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop DataNode JvmMetrics</application>
-          </applications>
-        </item>
-        <item type="2" key="DataNode.JvmMetrics.ThreadsWaiting" value_type="3">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>DataNode.JvmMetrics.ThreadsWaiting</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop DataNode JvmMetrics</application>
-          </applications>
-        </item>
-        <item type="2" key="DataNode.JvmMetrics.GcCountMarkSweepCompact" value_type="3">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>DataNode.JvmMetrics.GcCountMarkSweepCompact</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop DataNode JvmMetrics</application>
-          </applications>
-        </item>
-        <item type="2" key="DataNode.JvmMetrics.LogError" value_type="3">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>DataNode.JvmMetrics.LogError</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop DataNode JvmMetrics</application>
-          </applications>
-        </item>
-        <item type="2" key="DataNode.JvmMetrics.MemHeapUsedM" value_type="0">
-          <units>B</units>
-          <multiplier>1</multiplier>
-          <delta>0</delta>
-          <formula>1048576</formula>
-          <description>DataNode.JvmMetrics.MemHeapUsedM</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop DataNode JvmMetrics</application>
-          </applications>
-        </item>
-        <item type="2" key="DataNode.JvmMetrics.ThreadsTerminated" value_type="3">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>DataNode.JvmMetrics.ThreadsTerminated</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop DataNode JvmMetrics</application>
-          </applications>
-        </item>
-        <item type="2" key="DataNode.JvmMetrics.GcCount" value_type="3">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>DataNode.JvmMetrics.GcCount</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop DataNode JvmMetrics</application>
-          </applications>
-        </item>
-        <item type="2" key="DataNode.JvmMetrics.GcCountCopy" value_type="3">
-          <units></units>
-          <multiplier>0</multiplier>
-          <description>DataNode.JvmMetrics.GcCountCopy</description>
-          <delay>30</delay>
-          <history>90</history>
-          <trends>365</trends>
-          <applications>
-            <application>Hadoop DataNode JvmMetrics</application>
           </applications>
         </item>
         <item type="10" key="get_hadoop_jmx.pl[{HOST.CONN} {$DATANODEPORT} &quot;{HOSTNAME}&quot;]" value_type="1">

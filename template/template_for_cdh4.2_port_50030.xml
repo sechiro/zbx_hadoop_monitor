@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<zabbix_export version="1.0" date="13.04.06" time="23.22">
+<zabbix_export version="1.0" date="13.04.06" time="23.27">
   <hosts>
-    <host name="Hadoop_write_JMX">
+    <host name="Hadoop_JobTracker_JMX">
       <proxy_hostid>0</proxy_hostid>
       <useip>1</useip>
       <dns></dns>
@@ -17,8 +17,349 @@
       <ipmi_password></ipmi_password>
       <groups>
         <group>Templates</group>
-      </groups><items>        <item type="10" key="get_hadoop_jmx.pl[{HOST.CONN} {$WRITEPORT} &quot;{HOSTNAME}&quot;]" value_type="1">
-          <description>Hadoop write JMX Metrics 取得ログ</description>
+      </groups><items>        <item type="2" key="JobTracker.Memory.HeapMemoryUsage.committed" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>JobTracker.Memory.HeapMemoryUsage.committed</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop JobTracker Memory</application>
+          </applications>
+        </item>
+        <item type="2" key="JobTracker.Memory.HeapMemoryUsage.used" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>JobTracker.Memory.HeapMemoryUsage.used</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop JobTracker Memory</application>
+          </applications>
+        </item>
+        <item type="2" key="JobTracker.Memory.HeapMemoryUsage.max" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>JobTracker.Memory.HeapMemoryUsage.max</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop JobTracker Memory</application>
+          </applications>
+        </item>
+        <item type="2" key="JobTracker.Memory.HeapMemoryUsage.init" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>JobTracker.Memory.HeapMemoryUsage.init</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop JobTracker Memory</application>
+          </applications>
+        </item>
+        <item type="2" key="JobTracker.Memory.NonHeapMemoryUsage.committed" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>JobTracker.Memory.NonHeapMemoryUsage.committed</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop JobTracker Memory</application>
+          </applications>
+        </item>
+        <item type="2" key="JobTracker.Memory.NonHeapMemoryUsage.used" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>JobTracker.Memory.NonHeapMemoryUsage.used</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop JobTracker Memory</application>
+          </applications>
+        </item>
+        <item type="2" key="JobTracker.Memory.NonHeapMemoryUsage.max" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>JobTracker.Memory.NonHeapMemoryUsage.max</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop JobTracker Memory</application>
+          </applications>
+        </item>
+        <item type="2" key="JobTracker.Memory.NonHeapMemoryUsage.init" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>JobTracker.Memory.NonHeapMemoryUsage.init</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop JobTracker Memory</application>
+          </applications>
+        </item>
+        <item type="2" key="JobTracker.JobTrackerInfo.ThreadCount" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>JobTracker.JobTrackerInfo.ThreadCount</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop JobTracker JobTrackerInfo</application>
+          </applications>
+        </item>
+        <item type="2" key="JobTracker.JobTrackerInfo.AliveNodesInfo.failures" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>JobTracker.JobTrackerInfo.AliveNodesInfo.failures</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop JobTracker JobTrackerInfo</application>
+          </applications>
+        </item>
+        <item type="2" key="JobTracker.JobTrackerInfo.AliveNodesInfo.dir_failures" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>JobTracker.JobTrackerInfo.AliveNodesInfo.dir_failures</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop JobTracker JobTrackerInfo</application>
+          </applications>
+        </item>
+        <item type="2" key="JobTracker.JobTrackerInfo.AliveNodesInfo.last_seen" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>JobTracker.JobTrackerInfo.AliveNodesInfo.last_seen</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop JobTracker JobTrackerInfo</application>
+          </applications>
+        </item>
+        <item type="2" key="JobTracker.JobTrackerInfo.AliveNodesInfo.hostname" value_type="1">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>JobTracker.JobTrackerInfo.AliveNodesInfo.hostname</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop JobTracker JobTrackerInfo</application>
+          </applications>
+        </item>
+        <item type="2" key="JobTracker.JobTrackerInfo.AliveNodesInfo.slots.map_slots" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>JobTracker.JobTrackerInfo.AliveNodesInfo.slots.map_slots</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop JobTracker JobTrackerInfo</application>
+          </applications>
+        </item>
+        <item type="2" key="JobTracker.JobTrackerInfo.AliveNodesInfo.slots.reduce_slots" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>JobTracker.JobTrackerInfo.AliveNodesInfo.slots.reduce_slots</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop JobTracker JobTrackerInfo</application>
+          </applications>
+        </item>
+        <item type="2" key="JobTracker.JobTrackerInfo.AliveNodesInfo.slots.map_slots_used" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>JobTracker.JobTrackerInfo.AliveNodesInfo.slots.map_slots_used</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop JobTracker JobTrackerInfo</application>
+          </applications>
+        </item>
+        <item type="2" key="JobTracker.JobTrackerInfo.AliveNodesInfo.slots.reduce_slots_used" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>JobTracker.JobTrackerInfo.AliveNodesInfo.slots.reduce_slots_used</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop JobTracker JobTrackerInfo</application>
+          </applications>
+        </item>
+        <item type="2" key="JobTracker.JobTrackerInfo.AliveNodesInfo.health" value_type="1">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>JobTracker.JobTrackerInfo.AliveNodesInfo.health</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop JobTracker JobTrackerInfo</application>
+          </applications>
+        </item>
+        <item type="2" key="JobTracker.JobTrackerInfo.Hostname" value_type="1">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>JobTracker.JobTrackerInfo.Hostname</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop JobTracker JobTrackerInfo</application>
+          </applications>
+        </item>
+        <item type="2" key="JobTracker.JobTrackerInfo.Version" value_type="1">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>JobTracker.JobTrackerInfo.Version</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop JobTracker JobTrackerInfo</application>
+          </applications>
+        </item>
+        <item type="2" key="JobTracker.JobTrackerInfo.ConfigVersion" value_type="1">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>JobTracker.JobTrackerInfo.ConfigVersion</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop JobTracker JobTrackerInfo</application>
+          </applications>
+        </item>
+        <item type="2" key="JobTracker.JobTrackerInfo.BlacklistedNodesInfoJson" value_type="1">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>JobTracker.JobTrackerInfo.BlacklistedNodesInfoJson</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop JobTracker JobTrackerInfo</application>
+          </applications>
+        </item>
+        <item type="2" key="JobTracker.JobTrackerInfo.QueueInfoJson" value_type="1">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>JobTracker.JobTrackerInfo.QueueInfoJson</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop JobTracker JobTrackerInfo</application>
+          </applications>
+        </item>
+        <item type="2" key="JobTracker.JobTrackerInfo.Summary.jobs" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>JobTracker.JobTrackerInfo.Summary.jobs</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop JobTracker JobTrackerInfo</application>
+          </applications>
+        </item>
+        <item type="2" key="JobTracker.JobTrackerInfo.Summary.blacklisted" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>JobTracker.JobTrackerInfo.Summary.blacklisted</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop JobTracker JobTrackerInfo</application>
+          </applications>
+        </item>
+        <item type="2" key="JobTracker.JobTrackerInfo.Summary.nodes" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>JobTracker.JobTrackerInfo.Summary.nodes</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop JobTracker JobTrackerInfo</application>
+          </applications>
+        </item>
+        <item type="2" key="JobTracker.JobTrackerInfo.Summary.slots.map_slots" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>JobTracker.JobTrackerInfo.Summary.slots.map_slots</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop JobTracker JobTrackerInfo</application>
+          </applications>
+        </item>
+        <item type="2" key="JobTracker.JobTrackerInfo.Summary.slots.reduce_slots" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>JobTracker.JobTrackerInfo.Summary.slots.reduce_slots</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop JobTracker JobTrackerInfo</application>
+          </applications>
+        </item>
+        <item type="2" key="JobTracker.JobTrackerInfo.Summary.slots.map_slots_used" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>JobTracker.JobTrackerInfo.Summary.slots.map_slots_used</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop JobTracker JobTrackerInfo</application>
+          </applications>
+        </item>
+        <item type="2" key="JobTracker.JobTrackerInfo.Summary.slots.reduce_slots_used" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>JobTracker.JobTrackerInfo.Summary.slots.reduce_slots_used</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop JobTracker JobTrackerInfo</application>
+          </applications>
+        </item>
+        <item type="2" key="JobTracker.JobTrackerInfo.Summary.alive" value_type="3">
+          <units></units>
+          <multiplier>0</multiplier>
+          <description>JobTracker.JobTrackerInfo.Summary.alive</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Hadoop JobTracker JobTrackerInfo</application>
+          </applications>
+        </item>
+        <item type="10" key="get_hadoop_jmx.pl[{HOST.CONN} {$JOBTRACKERPORT} &quot;{HOSTNAME}&quot;]" value_type="1">
+          <description>Hadoop JobTracker JMX Metrics 取得ログ</description>
           <ipmi_sensor></ipmi_sensor>
           <delay>30</delay>
           <history>90</history>
@@ -26,14 +367,15 @@
           <status>0</status>
           <data_type>0</data_type>
           <applications>
-            <application>Hadoop Monitor Script for write</application>
+            <application>Hadoop Monitor Script for JobTracker</application>
           </applications>
         </item></items><graphs/><triggers/>
       <templates/>
       <macros>
         <macro>
-          <value>directory</value>
-          <name>{$WRITEPORT}</name>
+          <value>50030
+</value>
+          <name>{$JOBTRACKERPORT}</name>
         </macro>
       </macros>
     </host>
