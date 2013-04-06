@@ -137,7 +137,7 @@ my $DataNode_calc_item = '        <item type="15" key="DataNode.FSDatasetState.c
         </item>';
 
 my $tmpl_footer = '
-      <templates/><triggers/>
+      <templates/>
       <macros>
         <macro>
           <value>' . $port . '</value>
