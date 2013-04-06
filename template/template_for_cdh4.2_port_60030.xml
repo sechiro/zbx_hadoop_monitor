@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export version="1.0" date="13.04.07" time="02.03">
   <hosts>
-    <host name="Hadoop_HBase_JMX">
+    <host name="Hadoop_HBase_Regionserver_JMX">
       <proxy_hostid>0</proxy_hostid>
       <useip>1</useip>
       <dns></dns>
