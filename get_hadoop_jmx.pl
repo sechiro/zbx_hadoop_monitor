@@ -81,13 +81,17 @@ if ( $dump_json == 1 ){
 my $processName = &get_hadoop_process_name($mxbean_object_list);
 
 # Get TaskTracker RPC Port Number
-my $tasktracker_rpcport = &get_tasktracker_rpcport($mxbean_object_list);
+my $tasktracker_rpcport;
+if ( $processName eq "TaskTracker" ){
+    $tasktracker_rpcport = &get_tasktracker_rpcport($mxbean_object_list);
+}
 
 # Parse raw JSON data to Zabbix infile format
 my @values = &parse_hadoop_jmx_metrics($mxbean_object_list, $hostname, $processName, $get_detail, $get_javalang, $debug_output);
 
 # Output stdout only
 if ( $nosend == 1 ){
+    print "[INFO] Service: $processName IP: $hostname Port: $port\n";
     print @values;
     exit 0
 }

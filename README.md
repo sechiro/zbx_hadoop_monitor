@@ -11,8 +11,8 @@ Zabbix Hadoop Monitor
 
 このツールは、ZabbixにてHadoopのメトリクスを収集するためのツールです。Zabbixの外部スクリプトとして動作します。以下の環境で動作確認をしています。
 
-* CDH3
-* CDH4 + MRv1
+* CDH3u5, u6
+* CDH4.2 + MRv1
 
     * HBase向けのものも鋭意製作中です。
 
