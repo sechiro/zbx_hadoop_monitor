@@ -50,7 +50,7 @@ if ( $zabbix_server_version <= 1.8 ){
 } else {
     $hostname = $ARGV[0];
     $port = $ARGV[1];
-    $zabbix_hostname = defined($ARGV[2]) ? $ARGV[3] : $hostname;
+    $zabbix_hostname = defined($ARGV[2]) ? $ARGV[2] : $hostname;
 }
 
 # Get raw JSON metrics data in mxbean object list format from the Hadoop daemon.

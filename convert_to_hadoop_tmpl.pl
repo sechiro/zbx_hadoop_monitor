@@ -29,7 +29,7 @@ my @values = <>; # Read from STDIN
 # ex) [INFO] Service: JobTracker IP: 192.168.97.131 Port: 50030
 my @header = split(/ /, shift(@values) );
 my $processName = $header[2];
-my $port = $header[6];
+my $port = chomp($header[6]);
 
 my %service_name_hash = ();
 foreach my $line ( @values ){
