@@ -36,7 +36,7 @@ Zabbixサーバの外部スクリプトディレクトリが "/etc/zabbix/extern
 ```
  $ git clone zbx_hadoop_monitor
  $ cd zbx_hadoop_monitor
- $ ./install.sh
+ $ sudo cp get_hadoop_jmx.pl /etc/zabbix/externalscripts/
 ```
 
 上記以外をZabbixサーバの外部スクリプトディレクトリとしている場合は、手動でファイルを配置してください。
@@ -103,7 +103,7 @@ Hadoopが提供しているメトリクスの中のRPC Detailed Metricsに分類
 本ツールには、情報収集スクリプトがHadoopサービスから取得したデータをもとにZabbixテンプレートを生成するスクリプトが付属しています。情報収集スクリプトにはこのツールと連携するため、Zabbixにデータを送信せず、標準出力に取得結果を出力するオプションがあり、以下のように使用します。
 
 ```
- $ ./get_hadoop_metrics.pl dummy hostname port --nosend | ./convert_infile.pl > template_name.xml
+ $ ./get_hadoop_jmx.pl dummy_arg hostname port --nosend | ./convert_to_hadoop_tmpl.pl > template_name.xml
 ```
 
 たとえば、QJMを使ったNamenode HA構成では、Journalnodeへの書き込み遅延に関するメトリクスが取得可能です。ただし、そのメトリクス名がJournalnodeのIPアドレスとポート番号に依存するため、その環境でテンプレートの生成を行う必要があります。
