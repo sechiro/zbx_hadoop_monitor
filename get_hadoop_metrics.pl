@@ -3,9 +3,6 @@
 # Copyright 2013, Seiichiro, Ishida All rights reserved.
 use strict;
 use warnings;
-use FindBin;
-use lib "$FindBin::Bin";
-use Local::ZbxHadoopMonitor;
 use JSON;
 use Data::Dumper;
 use LWP::UserAgent;
@@ -46,18 +43,6 @@ if ( $zabbix_server_version <= 1.8 ){
     $port = $ARGV[1];
     $zabbix_hostname = defined($ARGV[2]) ? $ARGV[3] : $hostname;
 }
-
-# Open temporary merics data file.
-if (!-d $infile_tmp_dir) {
-    mkdir $infile_tmp_dir
-        or die "[ERROR] Couldn't make $infile_tmp_dir in /tmp !";
-} elsif (!-w $infile_tmp_dir){
-    print "[ERROR] Can't write in infile temporary directory $infile_tmp_dir !";
-    exit 0;
-}
-my $zabbix_sender_infile = "$infile_tmp_dir/$hostname-$port.metrics-infile.dat";
-open my $infile_fh, ">", "$zabbix_sender_infile"
-    or die "[ERROR] Couldn't open $zabbix_sender_infile in /tmp !";
 
 my $json = JSON->new->allow_nonref;
 my $res;
@@ -115,6 +100,18 @@ if ( $nosend == 1 ){
     print @values;
     exit 0
 }
+
+# Open temporary merics data file.
+if (!-d $infile_tmp_dir) {
+    mkdir $infile_tmp_dir
+        or die "[ERROR] Couldn't make $infile_tmp_dir in /tmp !";
+} elsif (!-w $infile_tmp_dir){
+    print "[ERROR] Can't write in infile temporary directory $infile_tmp_dir !";
+    exit 0;
+}
+my $zabbix_sender_infile = "$infile_tmp_dir/$hostname-$port.metrics-infile.dat";
+open my $infile_fh, ">", "$zabbix_sender_infile"
+    or die "[ERROR] Couldn't open $zabbix_sender_infile in /tmp !";
 
 print {$infile_fh} @values;
 close $infile_fh;
